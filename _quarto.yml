@@ -1,0 +1,28 @@
+project:
+  type: book
+  output-dir: docs  
+
+book:
+  title: Afterthought
+  subtitle: A Family Story
+  author: 
+    name: Heather Marie Akou
+    attributes:
+      corresponding: True
+  date: "11/1/2023"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: litera
+  pdf:
+    documentclass: scrreprt
+
+
+
