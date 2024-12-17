@@ -1,5 +1,78 @@
-# Preface {.unnumbered}
+# Front Matter 
 
-This is a Quarto book.
+::: {.content-visible unless-format="pdf"}
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+## How to Use
+
+**How to Access this Book in Other Formats**
+
+- **EPUB:** click <i class="bi bi-download"></i> in the lefthand sidebar of the [HTML version]() or click [here]().
+    - EPUB's benefits include accessibility, manipulability (via eReader options), dynamic media, interactivity, reflowable text, and offline reading
+- **HTML:** click [here]().
+    - HTML's benefits include machine readability, dynamic media, interactivity, [reflowable text](https://en.wikipedia.org/wiki/Reflowable_document), online reading, and small file size
+- **PDF:** click <i class="bi bi-download"></i> in the lefthand sidebar of the [HTML version]() or click [here]().
+    - PDF's benefits include printability of physical copies
+- **Quarto Markdown (QMD):** click "<i class="bi bi-github"></i> View source" in the righthand sidebar of the [HTML version]().
+    - QMD's benefits include reusability (revising, remixing, reformatting, repurposing, etc.) via a universal format
+- **TeX:** click "<i class="bi bi-github"></i> View source" in the righthand sidebar of the [HTML version](); then from "Files" in the lefthand sidebar, select ""
+    - (La)TeX's benefits include advanced document formatting and typesetting 
+
+**How to Annotate and Comment on the HTML Book**
+
+You can highlight and comment on the HTML version of this book via [Hypothes.is](https://web.hypothes.is/). To start highlighting and commenting on it, click the arrow (<) in the upper right corner of the HTML book to open Hypothes.is's annotation sidebar. Then, sign up / log in. 
+
+- To create an annotation, select text and then select the Annotate button.
+- To create a highlight ([visible only to you](https://web.hypothes.is/help/why-are-highlights-private-by-default/)), select text and then select the Highlight button.
+    - Click the "eye" icon to show / hide highlights
+- To annotate in a private group, select the group from the groups dropdown. Don't see your group? Ask the group creator to send a [join link](https://web.hypothes.is/help/how-to-join-a-private-group/).
+- To reply to an annotation, select the Reply button.
+- Click the "paper" icon to use "Page Notes" to comment on the whole page rather than a specific section of it
+
+You can delete your highlights, comments, etc. 
+
+For more information on how to use hypothes.is, see its [Annotation Basics](https://web.hypothes.is/help/annotation-basics/).
+
+**How to Report a Problem (Technological, Accessibility, or Textual) with this Book**
+
+Click "Report an Issue" in the righthand sidebar of the [HTML version](); then complete and submit the bug report.
+
+**To Learn More**
+
+To learn more about how to use this book, see [Quarto's Guide](https://quarto.org/docs/guide/) or try its features.
+
+## Copyright and License
+
+&copy; 2024 Heather Akou\
+
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Afterthought: A Family Story</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.heatherakou.net/">Heather Akou</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt=""></a></p>
+
+**You are free to:**
+
+- **Share**---copy and redistribute the material in any medium or format
+    - The licensor cannot revoke these freedoms as long as you follow the license terms.  
+
+**Under the following terms:**
+
+- **Attribution**---You must give [appropriate credit](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-appropriate-credit), provide a link to the license, and [indicate if changes were made](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-indicate-changes). You may do so in any reasonable manner but not in any way that suggests the licensor endorses you or your use.  
+- **NonCommercial**---You may not use the material for [commercial purposes](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-commercial-purposes) .
+- **NoDerivatives**---If you [remix, transform, or build upon](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-some-kinds-of-mods) the material, you may not distribute the modified material.  
+- **No additional restrictions**---You may not apply legal terms or [technological measures](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-technological-measures) that legally restrict others from doing anything the license permits.
+
+**Notices:**
+
+- You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable [exception or limitation](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-exception-or-limitation).
+- No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as [publicity, privacy, or moral rights](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-publicity-privacy-or-moral-rights) may limit how you use the material.
+
+## Publisher
+
+![](images/iublpub_logo.png){fig-alt="Logo of Indiana University Bloomington Libraries Publishing" width="40%"}\
+
+[Indiana University Bloomington Libraries Publishing](https://libraries.indiana.edu/publishing-grey-literature)\
+1320 E. Tenth Street\
+Bloomington, IN 47405
+
+:::
+
+## How to Cite
+
+Akou, Heather. [*Afterthought: A Family Story*](https://doi.org/). Indiana University Bloomington Libraries Publishing, 2024.

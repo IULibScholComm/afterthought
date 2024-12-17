@@ -1,0 +1,16 @@
+# Part II: In a Family Way
+
+![Lila, circa 1948. In the center is her oldest daughter, Myrtle Joyce. Her son, John, is sitting in her lap. Standing on her left are Veda's children, Patty and David.](images/Akou16.JPG){fig-scap="Lila, circa 1948." fig-alt="Black-and-white snapshot of Lila as a young adult, sitting on the steps in front of a house, surrounded by six small children. Her son, no more than two years old, is sitting in her lap. Most of the children are barefoot and messy." width="75%"}
+
+::: {.content-visible when-format="html"}
+
+---
+
+:::
+
+![I developed this genealogical chart using data from [ancestry.com](https://www.ancestry.com/). It does not include most of Lila's children, because Herman only fathered her second and third children (John and Alice). Alice was my mother.](images/Akou17.jpeg){fig-alt="Genealogical chart showing Lila’s in-laws. Edward and Alice Schneider had nine children, including Lila’s husband, Herman." fig-scap="Members of the Schneider Family 1922--1958" width="85%" }
+
+## Notes
+
+In this part of the book, we are introduced to the Schneider family of West Salem, which Viola and Myrtle Johnson have already married into. 
+

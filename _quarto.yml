@@ -3,26 +3,254 @@ project:
   output-dir: docs  
 
 book:
-  title: Afterthought
+  title: "Afterthought"
   subtitle: A Family Story
   author: 
-    name: Heather Marie Akou
+    name: 
+      given: Heather
+      family: Akou
     attributes:
       corresponding: True
-  date: "11/1/2023"
+    affiliations:
+      - name: |-
+          Fashion Design
+
+          Eskenazi School of Art, Architecture + Design
+
+          Indiana University Bloomington
+        department: Fashion Design
+        address: 130 S. Woodlawn Ave.
+        city: Bloomington
+        region: IN 
+        country: US
+        postal-code: 47405
+        url: https://eskenazi.indiana.edu/undergraduate/majors/fashion-ba.html
+    email: hakou@iu.edu
+    url: https://eskenazi.indiana.edu/faculty/directory/akou-heather.html
+    orcid: 0000-0001-7288-9070
+  date: last-modified
+  date-format: "YYYY"
+  abstract: | 
+    *Afterthought: A Family Story* focuses on the life of my grandmother, Lila Slaback, who grew up in a dysfunctional, working-class family in La Crosse, Wisconsin, in the 1930s. In her short adult life, she gave birth to seven children with at least four different men and died in 1958 at age thirty-six. She was a real person, but her family was not proud of her story. This book is my best attempt to recover it. This work of historical fiction can be read like a memoir. With extensive notes and resources, it can also be read as inspiration for researching and writing historical fiction, especially in the United States. As an educational text, it would be appropriate for courses on fashion history, American history, gender roles, family, poverty, healthcare, and generational trauma.  
+  description: |
+      Historical fiction book about the difficult life of a working-class woman in Wisconsin in the 1930s, 1940s, and 1950s.
+  references: references.bib
+  cover-image: images/cover.png
+  cover-image-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
+  downloads: [pdf, epub]
+  # doi:
+  language: "en-US"
+  license: CC BY-NC-ND
+  type: book
+  publisher: "Indiana University Bloomington Libraries Publishing"
+  publisher-place: Bloomington, IN
+  favicon: images/cover.png
+  # repo-url: 
+  # issue-url:
+  repo-actions: [source, issue]
+  reader-mode: true
+  # google-analytics: 
+  search: 
+    location: sidebar
+    type: textbox
+    copy-button: true
+    show-item-context: true
+  page-navigation: true
+  back-to-top-navigation: true
+  image: images/cover.png
+  image-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time." 
+  bread-crumbs: true
+  twitter-card: true
+  open-graph: true
+  comments: 
+    hypothesis: 
+      showHighlights: whenSidebarOpen
+      theme: classic
+      enableExperimentalNewNoteButton: true
+  sidebar: 
+    aria-label: Table of Contents
+    style: floating
+    collapse-level: 1
+    logo: images/cover.png
+    logo-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
+    tools: 
+      - icon: linkedin
+        href: https://www.linkedin.com/in/heather-akou-60a41a40
+        aria-label: LinkedIn
+      - icon: instagram
+        href: https://www.instagram.com/uniformhistories/
+        aria-label: Instagram
+      - icon: person-circle
+        href: https://www.heatherakou.net/
+        aria-label: homepage
+
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - dedication.qmd
+    - prologue.qmd
+    - slaback.qmd
+    - one.qmd
+    - two.qmd
+    - three.qmd
+    - four.qmd
+    - five.qmd
+    - six.qmd
+    - seven.qmd
+    - eight.qmd
+    - nine.qmd
+    - ten.qmd
+    - eleven.qmd
+    - twelve.qmd
+    - thirteen.qmd
+    - fourteen.qmd
+    - fifteen.qmd
+    - sixteen.qmd
+    - seventeen.qmd
+    - eighteen.qmd
+    - nineteen.qmd
+    - twenty.qmd
+    - twentyone.qmd
+    - twentytwo.qmd
+    - twentythree.qmd
+    - twentyfour.qmd
+    - twentyfive.qmd
+    - twentysix.qmd
+    - twentyseven.qmd
+    - twentyeight.qmd
+    - twentynine.qmd
+    - family.qmd
+    - thirty.qmd
+    - thirtyone.qmd
+    - thirtytwo.qmd
+    - thirtythree.qmd
+    - thirtyfour.qmd
+    - thirtyfive.qmd
+    - thirtysix.qmd
+    - thirtyseven.qmd
+    - thirtyeight.qmd
+    - thirtynine.qmd
+    - forty.qmd
+    - fortyone.qmd
+    - fortytwo.qmd
+    - fortythree.qmd
+    - fortyfour.qmd
+    - fortyfive.qmd
+    - fortysix.qmd
+    - fortyseven.qmd
+    - fortyeight.qmd
+    - fortynine.qmd
+    - fifty.qmd
+    - fiftyone.qmd
+    - fiftytwo.qmd
+    - fiftythree.qmd
+    - fiftyfour.qmd
+    - fiftyfive.qmd
+    - fiftysix.qmd
+    - fiftyseven.qmd
+    - epilogue.qmd
     - references.qmd
 
+google-scholar: true
+csl: chicago-fullnote-bibliography-no-em-dash.csl
 bibliography: references.bib
+citations-hover: true
 
 format:
   html:
-    theme: litera
-  pdf:
-    documentclass: scrreprt
+    theme: 
+      light: default
+      dark: darkly
+    css: style.css
+    anchor-sections: true
+    smooth-scroll: true
+    section-divs: true
+    email-obfuscation: references
+    html-q-tags: true
+    toc: true
+    fig-cap-location: margin
+    page-layout: article
+    appendix-style: default
+    appendix-cite-as: true
+    title-block-style: default
+    lightbox: true
+    link-external-newwindow: true
+    format-links: true
+    citation-location: document
+    citeproc: true
+    footnotes-hover: true
+    crossrefs-hover: true
+    citation: true
+    lang: "en-US"
+    number-sections: false
+  
+  titlepage-pdf:
+    coverpage: true
+    coverpage-bg-image: "images/cover_pdf.png"
+    coverpage-theme:
+      title-style: none
+      author-style: none
+      date-style: "none"
+    titlepage: true
+    titlepage-logo: "images/iublpub_logo.png"
+    titlepage-geometry: ["top=2in", "bottom=1in", "right=1in", "left=1in"]
+    titlepage-footer: | # text
+      Indiana University Bloomington Libraries Publishing\
+      Bloomington, Indiana
+    titlepage-theme:
+      elements: ["\\titleblock", "\\authorblock", "\\vfill", "\\logoblock", "\\footerblock"]
+      title-style: "plain"
+      title-fontstyle: ["textbf"]
+      title-fontsize: 24
+      title-space-after: 1cm
+      subtitle-fontsize: 16
+      author-style: "plain"
+      author-fontsize: 16
+      affiliation-style: "none"
+      logo-size: "0.5\\paperwidth"
+      footer-fontfamily: QTHelvetCnd.otf
+      footer-fontsize: 12
+    titlepage-include-file: tex/copyright.tex
+    documentclass: book
+    keep-tex: true
+    toc: true
+    lof: true
+    toc-title: "Table of Contents"
+    toccolor: blue
+    number-sections: false
+    link-citations: true
+    dpi: 300
+    reference-location: block
+    linkcolor: blue
+    cite-method: citeproc
+    citeproc: true
+    notes-after-punctuation: true
+    lang: "en-US"
+    keywords: fashion, body image, historical fiction, American history, Wisconsin, working class, generational trauma, poverty, healthcare, parenting
+    subject: fictional memoir
+    latex-auto-mk: true
+    latex-auto-install: True
+    latex-min-runs: 4
+    latex-output-dir: tex
+    header-includes: |
+      \usepackage[scale=2]{ccicons}
+      \usepackage[paperwidth=6in, paperheight=9in, margin=1in]{geometry}
 
+
+  epub: 
+    epub-cover-image: images/cover_epub.png
+    css: style.css
+    html-q-tags: true
+    toc: true
+    lang: "en-US"
+    fig-align: left
+    fig-responsive: true
+    number-sections: false
+    keywords: fashion, body image, historical fiction, American history, Wisconsin, working class, generational trauma, poverty, healthcare, parenting
+    subject: fictional memoir
+    rights: Copyright © 2024 by Heather Akou. Licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+    page-progression-direction: ltr
+    citeproc: true
+    dir: ltr
+    date-meta: YYYY
 
 
