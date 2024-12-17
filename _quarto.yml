@@ -38,7 +38,7 @@ book:
   cover-image: images/cover.png
   cover-image-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
   downloads: [pdf, epub]
-  # doi:
+  doi: 10.5967/rc90-k143
   language: "en-US"
   license: CC BY-NC-ND
   type: book
@@ -182,6 +182,9 @@ format:
     citation: true
     lang: "en-US"
     number-sections: false
+    include-in-header: 
+      - text: <meta name="google-site-verification" content="eJHds-HZowhP4fOmzTkps1RTCDKNi3ViSQ2BSaFVA7Y" />
+      - text: <link rel="canonical" href="https://iulibscholcomm.github.io/afterthought/" />
   
   titlepage-pdf:
     coverpage: true
