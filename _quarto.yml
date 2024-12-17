@@ -45,8 +45,10 @@ book:
   publisher: "Indiana University Bloomington Libraries Publishing"
   publisher-place: Bloomington, IN
   favicon: images/cover.png
-  # repo-url: 
-  # issue-url:
+  site-url: https://iulibscholcomm.github.io/afterthought
+  repo-url: https://github.com/IULibScholComm/afterthought
+  issue-url: https://github.com/IULibScholComm/afterthought/issues
+  pdf-url: https://iulibscholcomm.github.io/afterthought/Afterthought.pdf
   repo-actions: [source, issue]
   reader-mode: true
   # google-analytics: 
