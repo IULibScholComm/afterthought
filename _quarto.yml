@@ -51,7 +51,8 @@ book:
   pdf-url: https://iulibscholcomm.github.io/afterthought/Afterthought.pdf
   repo-actions: [source, issue]
   reader-mode: true
-  # google-analytics: 
+  google-analytics: 
+    tracking-id: "G-V9Q63HJNJQ"
   search: 
     location: sidebar
     type: textbox
