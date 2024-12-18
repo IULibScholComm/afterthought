@@ -48,7 +48,6 @@ book:
   site-url: https://iulibscholcomm.github.io/afterthought
   repo-url: https://github.com/IULibScholComm/afterthought
   issue-url: https://github.com/IULibScholComm/afterthought/issues
-  pdf-url: https://iulibscholcomm.github.io/afterthought/Afterthought.pdf
   repo-actions: [source, issue]
   reader-mode: true
   google-analytics: 

@@ -1,20 +1,18 @@
 # Front Matter 
 
-::: {.content-visible unless-format="pdf"}
-
 ## How to Use
+
+::: {.content-visible unless-format="pdf" unless-format="epub"}
 
 **How to Access this Book in Other Formats**
 
-- **EPUB:** click <i class="bi bi-download"></i> in the lefthand sidebar of the [HTML version]() or click [here]().
+- **EPUB:** click <i class="bi bi-download"></i> in the left-hand sidebar
     - EPUB's benefits include accessibility, manipulability (via eReader options), dynamic media, interactivity, reflowable text, and offline reading
-- **HTML:** click [here]().
-    - HTML's benefits include machine readability, dynamic media, interactivity, [reflowable text](https://en.wikipedia.org/wiki/Reflowable_document), online reading, and small file size
-- **PDF:** click <i class="bi bi-download"></i> in the lefthand sidebar of the [HTML version]() or click [here]().
+- **PDF:** click <i class="bi bi-download"></i> in the left-hand sidebar
     - PDF's benefits include printability of physical copies
-- **Quarto Markdown (QMD):** click "<i class="bi bi-github"></i> View source" in the righthand sidebar of the [HTML version]().
+- **Quarto Markdown (QMD):** click "<i class="bi bi-github"></i> View source" in the right-hand sidebar
     - QMD's benefits include reusability (revising, remixing, reformatting, repurposing, etc.) via a universal format
-- **TeX:** click "<i class="bi bi-github"></i> View source" in the righthand sidebar of the [HTML version](); then from "Files" in the lefthand sidebar, select ""
+- **TeX:** click "<i class="bi bi-github"></i> View source" in the right-hand sidebar; then in the left-hand sidebar, select "Afterthought.tex"
     - (La)TeX's benefits include advanced document formatting and typesetting 
 
 **How to Annotate and Comment on the HTML Book**
@@ -30,15 +28,23 @@ You can highlight and comment on the HTML version of this book via [Hypothes.is]
 
 You can delete your highlights, comments, etc. 
 
-For more information on how to use hypothes.is, see its [Annotation Basics](https://web.hypothes.is/help/annotation-basics/).
+For more information on how to use Hypothes.is, see its [Annotation Basics](https://web.hypothes.is/help/annotation-basics/).  
 
-**How to Report a Problem (Technological, Accessibility, or Textual) with this Book**
+:::
 
-Click "Report an Issue" in the righthand sidebar of the [HTML version](); then complete and submit the bug report.
+**How to Report a Problem (Technological, Accessibility, Textual, Etc.) with this Book**
+
+Click "Report an Issue" in the right-hand sidebar of the [HTML version](https://iulibscholcomm.github.io/afterthought/); then complete and submit the bug report.  
+
+::: {.content-visible unless-format="pdf" unless-format="epub"}
 
 **To Learn More**
 
-To learn more about how to use this book, see [Quarto's Guide](https://quarto.org/docs/guide/) or try its features.
+To learn more about how to use the HTML book, see [Quarto's Guide](https://quarto.org/docs/guide/), or try its features.
+
+:::
+
+::: {.content-visible unless-format="pdf"}
 
 ## Copyright and License
 
