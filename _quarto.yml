@@ -71,10 +71,10 @@ book:
       enableExperimentalNewNoteButton: true
   sidebar: 
     aria-label: Table of Contents
-    style: floating
+    style: docked
     collapse-level: 1
-    logo: images/cover.png
-    logo-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
+    # logo: images/cover.png
+    # logo-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
     tools: 
       - icon: linkedin
         href: https://www.linkedin.com/in/heather-akou-60a41a40
