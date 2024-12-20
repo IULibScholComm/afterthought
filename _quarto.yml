@@ -73,6 +73,7 @@ book:
     aria-label: Table of Contents
     style: docked
     collapse-level: 1
+    pinned: true
     # logo: images/cover.png
     # logo-alt: "Cover image: two teenage girls wearing roller skates and knee-length dresses that symbolizes a relatively happy time in the life of the main character, Lila. The image is blurred on the right side to suggest the fading of memory and the passage of time."
     tools: 
@@ -172,7 +173,7 @@ format:
     fig-cap-location: margin
     page-layout: article
     appendix-style: default
-    appendix-cite-as: true
+    appendix-cite-as: bibtex
     title-block-style: default
     lightbox: true
     link-external-newwindow: true
@@ -181,7 +182,6 @@ format:
     citeproc: true
     footnotes-hover: true
     crossrefs-hover: true
-    citation: true
     lang: "en-US"
     number-sections: false
     include-in-header: 
