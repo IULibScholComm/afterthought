@@ -1,8 +1,8 @@
 # Front Matter 
 
-## How to Use
-
 ::: {.content-visible unless-format="pdf" unless-format="epub"}
+
+## How to Use
 
 **How to Access this Book in Other Formats**
 
@@ -34,7 +34,7 @@ For more information on how to use Hypothes.is, see its [Annotation Basics](http
 
 **How to Report a Problem (Technological, Accessibility, Textual, Etc.) with this Book**
 
-Click "Report an Issue" in the right-hand sidebar of the [HTML version](https://iulibscholcomm.github.io/afterthought/); then complete and submit the bug report.  
+Click "Report an issue" in the right-hand sidebar of the [HTML version](https://iulibscholcomm.github.io/afterthought/); then complete and submit the bug report.  
 
 ::: {.content-visible unless-format="pdf" unless-format="epub"}
 
@@ -67,7 +67,7 @@ To learn more about how to use the HTML book, see [Quarto's Guide](https://quart
 **Notices:**
 
 - You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable [exception or limitation](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-exception-or-limitation).
-- No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as [publicity, privacy, or moral rights](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-publicity-privacy-or-moral-rights) may limit how you use the material.
+- No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as [publicity, privacy, or moral rights](https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1#ref-publicity-privacy-or-moral-rights) may limit how you use the material. 
 
 ## Publisher
 
@@ -77,8 +77,9 @@ To learn more about how to use the HTML book, see [Quarto's Guide](https://quart
 1320 E. Tenth Street\
 Bloomington, IN 47405
 
+## Cover Information
+
+**Cover Image**: Photographer unknown; ca. 1937; &copy; Heather Akou  
+**Cover Design**: Adam Mazel
+
 :::
-
-## How to Cite
-
-Akou, Heather. [*Afterthought: A Family Story*](https://doi.org/10.5967/rc90-k143). Indiana University Bloomington Libraries Publishing, 2025.
