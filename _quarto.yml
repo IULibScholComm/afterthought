@@ -28,7 +28,7 @@ book:
     email: hakou@iu.edu
     url: https://eskenazi.indiana.edu/faculty/directory/akou-heather.html
     orcid: 0000-0001-7288-9070
-  date: last-modified
+  date: "2025"
   date-format: "YYYY"
   abstract: | 
     *Afterthought: A Family Story* focuses on the life of my grandmother, Lila Slaback, who grew up in a dysfunctional, working-class family in La Crosse, Wisconsin, in the 1930s. In her short adult life, she gave birth to seven children with at least four different men and died in 1958 at age thirty-six. She was a real person, but her family was not proud of her story. This book is my best attempt to recover it. This work of historical fiction can be read like a memoir. With extensive notes and resources, it can also be read as inspiration for researching and writing historical fiction, especially in the United States. As an educational text, it would be appropriate for courses on fashion history, American history, gender roles, family, poverty, healthcare, and generational trauma.  
@@ -45,7 +45,7 @@ book:
   publisher: "Indiana University Bloomington Libraries Publishing"
   publisher-place: Bloomington, IN
   favicon: images/cover.png
-  site-url: https://iulibscholcomm.github.io/afterthought
+  site-url: https://iulibrariespublishing.iu.edu/afterthought/
   repo-url: https://github.com/IULibScholComm/afterthought
   issue-url: https://github.com/IULibScholComm/afterthought/issues
   repo-actions: [source, issue]
@@ -186,7 +186,7 @@ format:
     number-sections: false
     include-in-header: 
       - text: <meta name="google-site-verification" content="eJHds-HZowhP4fOmzTkps1RTCDKNi3ViSQ2BSaFVA7Y" />
-      - text: <link rel="canonical" href="https://iulibscholcomm.github.io/afterthought/" />
+      - text: <link rel="canonical" href="https://iulibrariespublishing.iu.edu/afterthought/" />
   
   titlepage-pdf:
     coverpage: true

@@ -34,7 +34,7 @@ For more information on how to use Hypothes.is, see its [Annotation Basics](http
 
 **How to Report a Problem (Technological, Accessibility, Textual, Etc.) with this Book**
 
-Click "Report an issue" in the right-hand sidebar of the [HTML version](https://iulibscholcomm.github.io/afterthought/); then complete and submit the bug report.  
+Click "Report an issue" in the right-hand sidebar of the [HTML version](https://iulibrariespublishing.iu.edu/afterthought/); then complete and submit the bug report.  
 
 ::: {.content-visible unless-format="pdf" unless-format="epub"}
 

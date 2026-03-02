@@ -1,26 +1,29 @@
 % Options for packages loaded elsewhere
+% Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  american,
   letterpaper,
 ]{book}
-
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
 \else % if luatex or xetex
-  \usepackage{unicode-math}
+  \usepackage{unicode-math} % this also loads fontspec
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\ifPDFTeX\else  
-    % xetex/luatex font selection
+\ifPDFTeX\else
+  % xetex/luatex font selection
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -38,9 +41,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Make \paragraph and \subparagraph free-standing
 \makeatletter
 \ifx\paragraph\undefined\else
@@ -65,8 +65,10 @@
 \fi
 \makeatother
 
+
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -201,23 +203,9 @@
 
 % Set the coverpage font families
 
-
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{american}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
-\ifLuaTeX
-  \usepackage[english]{selnolig} % disable illegal ligatures
-\fi
 \usepackage{bookmark}
-
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\urlstyle{same} % disable monospaced font for URLs
+\urlstyle{same}
 \hypersetup{
   pdftitle={Afterthought},
   pdfauthor={Heather Akou},
@@ -243,8 +231,7 @@ healthcare, parenting},
 \makeatother
 \subtitle{A Family Story}
 \author{Heather Akou}
-\date{2025}
-
+\date{2024}
 \begin{document}
 %%%%% begin titlepage extension code
 
@@ -319,7 +306,7 @@ Indiana University Bloomington Libraries Publishing\\
 Bloomington, Indiana}
 }
 \newcommand{\datestyled}{%
-{2025}
+{2024}
 }
 
 
@@ -426,7 +413,7 @@ Bloomington, Indiana}
 Etc.) with this Book}
 
 Click ``Report an issue'' in the right-hand sidebar of the
-\href{https://iulibscholcomm.github.io/afterthought/}{HTML version};
+\href{https://iulibrariespublishing.iu.edu/afterthought/}{HTML version};
 then complete and submit the bug report.
 
 \bookmarksetup{startatroot}
@@ -639,16 +626,17 @@ my fault alone.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{images/Akou02.JPG}
+{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio,alt={Lila with her younger brothers, Earl and Looy, c.~1931}]{images/Akou02.JPG}
 
 }
 
 \caption{Lila with her younger brothers, Earl and Looy, c.~1931}
 
-\end{figure}%%
+\end{figure}%
+
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{images/Akou03.jpg}
+{\centering \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={I developed this chart using Ancestry.com and census records. Only people who were alive during Lila's lifetime are listed; younger children and later generations are not. The fathers of Lila's last four children are speculative but are included as a reference for readers.}]{images/Akou03.jpg}
 
 }
 
@@ -827,18 +815,18 @@ would have owned a truck before moving to the city. In the 1920s,
 farmers commonly used horse-drawn wagons for transportation.
 
 For more information, see Wisconsin Legislative Reference
-Library\footnote{\citeproc{ref-wisc1952a}{{``The Development of
+Library,\footnote{\citeproc{ref-wisc1952a}{{``The Development of
   Wisconsin Population, 1840--1950''} (Wisconsin Legislative Reference
   Bureau Digital Collections, 1952),
-  \url{https://cdm16831.contentdm.oclc.org/digital/collection/p16831coll2/id/482/}}.},
-Richard Nelson Current\footnote{\citeproc{ref-current1977a}{\emph{Wisconsin:
+  \url{https://cdm16831.contentdm.oclc.org/digital/collection/p16831coll2/id/482/}}.}
+Richard Nelson Current,\footnote{\citeproc{ref-current1977a}{\emph{Wisconsin:
   A History} (1977; repr., {Urbana and Chicago}: University of Illinois
-  Press, 2001)}.}, Elizabeth Sanders\footnote{\citeproc{ref-sanders1999a}{\emph{Roots
+  Press, 2001)}.} Elizabeth Sanders,\footnote{\citeproc{ref-sanders1999a}{\emph{Roots
   of Reform: Farmers, Workers, and the American State, 1877--1917}
-  (University of Chicago Press, 1999)}.}, and William John White
-III\footnote{\citeproc{ref-white2000a}{{``An Unsung Hero: The Farm
+  (University of Chicago Press, 1999)}.} and William John White
+III.\footnote{\citeproc{ref-white2000a}{{``An Unsung Hero: The Farm
   Tractor's Contribution to Twentieth-Century United States Economic
-  Growth''} (PhD Dissertation, The Ohio State University, 2000)}.}.
+  Growth''} (PhD Dissertation, The Ohio State University, 2000)}.}
 
 \bookmarksetup{startatroot}
 
@@ -958,7 +946,7 @@ sure.''
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/Akou04-enlarged.jpg}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Houseboats along the river in La Crosse. Library of Congress Prints and Photographs Division, \#LC-USF33-003063-M4. Photograph by Arthur Rothstein (1915--1985) in 1939.}]{images/Akou04-enlarged.jpg}}
 
 }
 
@@ -1012,14 +1000,14 @@ Like Veda and Lila, my sister and I were close in age and spent a lot of
 time together exploring the neighborhood. The story of the black dog who
 wouldn't stop barking is based on one of my childhood experiences.
 
-For more information, see Susan Porter Benson\footnote{\citeproc{ref-benson2007a}{\emph{Household
+For more information, see Susan Porter Benson,\footnote{\citeproc{ref-benson2007a}{\emph{Household
   Accounts: Working-Class Family Economies in the Interwar United
-  States} (Ithaca: Cornell University Press, 2007)}.}, Andrew J.
-Cherlin\footnote{\citeproc{ref-cherlin2014a}{\emph{Labor's Love Lost:
+  States} (Ithaca: Cornell University Press, 2007)}.} Andrew J.
+Cherlin,\footnote{\citeproc{ref-cherlin2014a}{\emph{Labor's Love Lost:
   The Rise and Fall of the Working-Class Family in America} (New York:
-  Russell Sage Foundation, 2014)}.}, and Jane Farrell-Beck and Jean
-Parsons\footnote{\citeproc{ref-farrell-beck2007a}{\emph{{20\(^{th}\)-Century}
-  Dress in the United States} (New York: Fairchild, 2007)}.}.
+  Russell Sage Foundation, 2014)}.} and Jane Farrell-Beck and Jean
+Parsons.\footnote{\citeproc{ref-farrell-beck2007a}{\emph{{20\(^{th}\)-Century}
+  Dress in the United States} (New York: Fairchild, 2007)}.}
 
 \bookmarksetup{startatroot}
 
@@ -1138,14 +1126,14 @@ spinning in a circle (or being spun)---often to the point of
 dizziness---was something I did many times as a child. I spent a lot of
 time outdoors, regardless of the weather.
 
-For more information, see Eric J. Morser\footnote{\citeproc{ref-morser2003a}{{``Manufacturing
+For more information, see Eric J. Morser,\footnote{\citeproc{ref-morser2003a}{{``Manufacturing
   Pioneers: Commerce, Government, and Manhood in La Crosse, Wisconsin,
-  1840-1900''} (PhD Dissertation, University of Wisconsin, 2003)}.},
-William Barillas\footnote{\citeproc{ref-Barillas2006a}{\emph{The
+  1840-1900''} (PhD Dissertation, University of Wisconsin, 2003)}.}
+William Barillas,\footnote{\citeproc{ref-Barillas2006a}{\emph{The
   Midwestern Pastoral: Place and Landscape in the Literature of the
-  American Heartland} (Athens: Ohio University Press, 2006)}.}, John
-Nolen\footnote{\citeproc{ref-nolen1911a}{\emph{The Making of a Park
-  System in La Crosse} (La Crosse: The Inland Printing Company, 1911)}.},
+  American Heartland} (Athens: Ohio University Press, 2006)}.} John
+Nolen,\footnote{\citeproc{ref-nolen1911a}{\emph{The Making of a Park
+  System in La Crosse} (La Crosse: The Inland Printing Company, 1911)}.}
 and Guide to the Mississippi Valley Public Service Company
 Records.\footnote{\citeproc{ref-mississippi1914a}{{``Guide to the
   Mississippi Valley Public Service Company Records, MSS 028''} (La
@@ -1268,17 +1256,17 @@ don't know if Lila was dyslexic, but learning disabilities were barely
 recognized back then.
 
 For more information, see La Crosse Public Library Archives \& Local
-History Department\footnote{\citeproc{ref-lacrosselibrary2022a}{{``The
+History Department,\footnote{\citeproc{ref-lacrosselibrary2022a}{{``The
   Way It Was: Roosevelt School, Circa 1931,''} May 22, 2022,
-  \url{https://lacrossetribune.com/the-way-it-was-roosevelt-school-circa-1931/article_66e6c3d6-d9fa-11ec-b99f-83bfbe095d45.html}}.},
-James Hinshelwood\footnote{\citeproc{ref-hinshelwood1917a}{\emph{Congenital
-  Word-Blindness} (London: H. K. Lewis \& Co. Ltd., 1917)}.}, Kate
-Kelly\footnote{\citeproc{ref-kelly2017a}{{``Dick and Jane: Story of
+  \url{https://lacrossetribune.com/the-way-it-was-roosevelt-school-circa-1931/article_66e6c3d6-d9fa-11ec-b99f-83bfbe095d45.html}}.}
+James Hinshelwood,\footnote{\citeproc{ref-hinshelwood1917a}{\emph{Congenital
+  Word-Blindness} (London: H. K. Lewis \& Co. Ltd., 1917)}.} Kate
+Kelly,\footnote{\citeproc{ref-kelly2017a}{{``Dick and Jane: Story of
   These Early Readers,''} June 2, 2017,
-  \url{https://americacomesalive.com/dick-and-jane-story-of-these-early-readers/}}.},
-and Nikki Katz\footnote{\citeproc{ref-katz2012a}{\emph{The Book of Card
+  \url{https://americacomesalive.com/dick-and-jane-story-of-these-early-readers/}}.}
+and Nikki Katz.\footnote{\citeproc{ref-katz2012a}{\emph{The Book of Card
   Games: The Complete Rules to the Classics, Family Favorites, and
-  Forgotten Games} (New York: Simon; Schuster, 2012)}.}.
+  Forgotten Games} (New York: Simon; Schuster, 2012)}.}
 
 \bookmarksetup{startatroot}
 
@@ -1453,14 +1441,14 @@ the most popular.
 For more information, see Betty A. Bergland and Lori Ann Lahlum,
 eds.\footnote{\citeproc{ref-bergland2011a}{\emph{Norwegian American
   Women: Migration, Communities, and Identities} (St. Paul: Minnesota
-  Historical Society, 2011)}.}, Kathleen York\footnote{\citeproc{ref-york2012a}{\emph{Bridal
+  Historical Society, 2011)}.} Kathleen York,\footnote{\citeproc{ref-york2012a}{\emph{Bridal
   Fashion 1900--1950: The American Wedding Dress} (London: Bloomsbury,
-  2012)}.}, Inc The Statue of Liberty---Ellis Island
-Foundation\footnote{\citeproc{ref-ellis2020a}{{``Passenger Search,''}
-  2020, \url{https://heritage.statueofliberty.org/}}.}, and Frank
-Hoffmann, Frederick J. Augustyn Jr., and Martin J. Manning\footnote{\citeproc{ref-hoffmann2004a}{\emph{Dictionary
+  2012)}.} Inc The Statue of Liberty---Ellis Island
+Foundation,\footnote{\citeproc{ref-ellis2020a}{{``Passenger Search,''}
+  2020, \url{https://heritage.statueofliberty.org/}}.} and Frank
+Hoffmann, Frederick J. Augustyn Jr., and Martin J. Manning.\footnote{\citeproc{ref-hoffmann2004a}{\emph{Dictionary
   of Toys and Games in American Popular Culture} (Philadelphia: Haworth
-  Press, 2004)}.}.
+  Press, 2004)}.}
 
 \bookmarksetup{startatroot}
 
@@ -1566,13 +1554,13 @@ conservative segments of US society. I hated having my hair washed,
 combed, and braided, but I would have been horrified to ``look like a
 boy.''
 
-For more information, see Michael W. Apple\footnote{\citeproc{ref-apple1986a}{\emph{Teachers
+For more information, see Michael W. Apple,\footnote{\citeproc{ref-apple1986a}{\emph{Teachers
   and Texts: A Political Economy of Class and Gender Relations in
-  Education} (New York: Routledge, 1986)}.}, Diane Simon\footnote{\citeproc{ref-simon2000a}{\emph{Hair:
+  Education} (New York: Routledge, 1986)}.} Diane Simon,\footnote{\citeproc{ref-simon2000a}{\emph{Hair:
   Public, Political, Extremely Personal} (New York: St. Martin's,
-  2000)}.}, and F. Scott Fitzgerald\footnote{\citeproc{ref-fitzgerald1920a}{{``Bernice
+  2000)}.} and F. Scott Fitzgerald.\footnote{\citeproc{ref-fitzgerald1920a}{{``Bernice
   Bobs Her Hair''} (\emph{The Saturday Evening Post}, 1920),
-  \url{https://public.wsu.edu/~campbelld/engl494/bernicebobs.pdf}}.}.
+  \url{https://public.wsu.edu/~campbelld/engl494/bernicebobs.pdf}}.}
 
 \bookmarksetup{startatroot}
 
@@ -1730,14 +1718,14 @@ intense pressure from my mother to do the chores well and efficiently.
 Roasted squash with butter and brown sugar was one of my mother's
 favorite dishes in the fall. I learned to enjoy it as an adult.
 
-For more information, see Ronda L. Bowen\footnote{\citeproc{ref-bowen2014a}{{``Birthday
+For more information, see Ronda L. Bowen,\footnote{\citeproc{ref-bowen2014a}{{``Birthday
   Parties,''} in \emph{The Social History of the American Family: An
   Encyclopedia}, ed. Marilyn J. Coleman and Lawrence H. Ganong (New
-  York: SAGE Publications, 2014)}.}, Josh Wilker\footnote{\citeproc{ref-wilker2010a}{\emph{Cardboard
+  York: SAGE Publications, 2014)}.} Josh Wilker,\footnote{\citeproc{ref-wilker2010a}{\emph{Cardboard
   Gods: An All-American Tale Told Through Baseball Cards} (New York:
-  Seven Footer Press, 2010)}.}, and Julia Sophie Woersdorfer\footnote{\citeproc{ref-woersdorfer2017a}{\emph{The
+  Seven Footer Press, 2010)}.} and Julia Sophie Woersdorfer.\footnote{\citeproc{ref-woersdorfer2017a}{\emph{The
   Evolution of Household Technology and Consumer Behavior, 1800--2000}
-  (New York: Routledge, 2017)}.}.
+  (New York: Routledge, 2017)}.}
 
 \bookmarksetup{startatroot}
 
@@ -1745,7 +1733,7 @@ For more information, see Ronda L. Bowen\footnote{\citeproc{ref-bowen2014a}{{``B
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio]{images/Akou05.jpg}
+{\centering \includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio,alt={Article on the front page of the La Crosse Tribune, November 5, 1929}]{images/Akou05.jpg}
 
 }
 
@@ -1883,16 +1871,16 @@ The question of whether the family owned a radio was new; the Slaback
 family did own one. Lila's father, John, was recorded as working ``odd
 jobs'' for hourly wages (not a salary).
 
-For more information, see Deidre Bair\footnote{\citeproc{ref-bair2016a}{\emph{Al
-  Capone: His Life, Legacy, and Legend} (New York: Doubleday, 2016)}.},
-James Noble Gregory\footnote{\citeproc{ref-gregory2005a}{\emph{The
+For more information, see Deidre Bair,\footnote{\citeproc{ref-bair2016a}{\emph{Al
+  Capone: His Life, Legacy, and Legend} (New York: Doubleday, 2016)}.}
+James Noble Gregory,\footnote{\citeproc{ref-gregory2005a}{\emph{The
   Southern Diaspora: How the Great Migrations of Black and White
   Southerners Transformed America} (Chapel Hill: University of North
-  Carolina Press, 2005)}.}, James C. Howell\footnote{\citeproc{ref-howell2015a}{\emph{The
+  Carolina Press, 2005)}.} James C. Howell,\footnote{\citeproc{ref-howell2015a}{\emph{The
   History of Street Gangs in the United States: Their Origins and
-  Transformations} (Lanham, Maryland: Lexington Books, 2015)}.}, and
-James W. Loewen\footnote{\citeproc{ref-loewen2018a}{\emph{Sundown Town:
-  A Hidden Dimension of American Racism} (New York: New Press, 2018)}.}.
+  Transformations} (Lanham, Maryland: Lexington Books, 2015)}.} and
+James W. Loewen.\footnote{\citeproc{ref-loewen2018a}{\emph{Sundown Town:
+  A Hidden Dimension of American Racism} (New York: New Press, 2018)}.}
 
 \bookmarksetup{startatroot}
 
@@ -2026,7 +2014,7 @@ the family was pushing him away. Did they have to punish him too?
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{images/Akou06.jpg}
+{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio,alt={Page six of the La Crosse Tribune, August 15, 1930}]{images/Akou06.jpg}
 
 }
 
@@ -2065,16 +2053,16 @@ over and over---for fun, but also as a cautionary tale. Be careful.
 Don't lose track of your friends. Don't scare your parents half to
 death.
 
-For more information, see Ethan Blue\footnote{\citeproc{ref-blue2012a}{\emph{Doing
+For more information, see Ethan Blue,\footnote{\citeproc{ref-blue2012a}{\emph{Doing
   Time in the Depression: Everyday Life in Texas and California Prisons}
-  (New York University Press, 2012)}.}, Tim Brooks\footnote{\citeproc{ref-brooks2019a}{\emph{The
+  (New York University Press, 2012)}.} Tim Brooks,\footnote{\citeproc{ref-brooks2019a}{\emph{The
   Blackface Minstrel Show in Mass Media: 20th Century Performances on
   Radio, Records, Film and Television} (Jefferson, North Carolina:
-  McFarland, 2019)}.}, Russell Freedman\footnote{\citeproc{ref-freedman2005a}{\emph{Children
-  of the Great Depression} (New York: Clarion Books, 2005)}.}, and
-Michele Hilmes\footnote{\citeproc{ref-hilmes1997a}{\emph{Radio Voices:
+  McFarland, 2019)}.} Russell Freedman,\footnote{\citeproc{ref-freedman2005a}{\emph{Children
+  of the Great Depression} (New York: Clarion Books, 2005)}.} and
+Michele Hilmes.\footnote{\citeproc{ref-hilmes1997a}{\emph{Radio Voices:
   American Broadcasting, 1922--1952} (Minneapolis: University of
-  Minnesota Press, 1997)}.}.
+  Minnesota Press, 1997)}.}
 
 \bookmarksetup{startatroot}
 
@@ -2169,11 +2157,11 @@ grief without much support. Eating is one way to stuff emotions instead
 of feeling them. Photographs show that Lila was overweight as a child,
 but the rest of her family members were not.
 
-For more information, see Joan Jacobs Brumberg\footnote{\citeproc{ref-brumberg2010a}{\emph{The
+For more information, see Joan Jacobs Brumberg,\footnote{\citeproc{ref-brumberg2010a}{\emph{The
   Body Project: An Intimate History of American Girls} (New York: Knopf
-  Doubleday, 2010)}.}, Julian G. Elliott and Elena L.
-Grigorenko\footnote{\citeproc{ref-elliott2014a}{\emph{The Dyslexia
-  Debate} (Cambridge University Press, 2014)}.}, and Lawrence Jacob
+  Doubleday, 2010)}.} Julian G. Elliott and Elena L.
+Grigorenko,\footnote{\citeproc{ref-elliott2014a}{\emph{The Dyslexia
+  Debate} (Cambridge University Press, 2014)}.} and Lawrence Jacob
 Friedman and Mark Douglas McGarvie, eds.\footnote{\citeproc{ref-mcgarvie2003a}{\emph{Charity,
   Philanthropy, and Civility in American History} (Cambridge University
   Press, 2003)}.}
@@ -2384,12 +2372,12 @@ for standard sizes were referred to as ``stout.'' By rewarding Veda and
 shaming Lila, Aunt Hattie (whether intentionally or not) was driving a
 wedge between them. This is foreshadowing for future chapters.
 
-For more information, see the author\footnote{\citeproc{ref-akou2024a}{\emph{On
+For more information, see the author,\footnote{\citeproc{ref-akou2024a}{\emph{On
   the Job: A History of American Work Uniforms} (Oxford: Bloomsbury
-  Academic, 2024)}.}, Lauren Downing Peters\footnote{\citeproc{ref-peters2023a}{\emph{Fashion
+  Academic, 2024)}.} Lauren Downing Peters,\footnote{\citeproc{ref-peters2023a}{\emph{Fashion
   Before Plus-Size: Bodies, Bias, and the Birth of an Industry} (Oxford:
-  Bloomsbury Academic, 2023)}.}, and Jan Whitaker\footnote{\citeproc{ref-whitaker2006a}{\emph{Service
-  and Style} (New York: St. Martin's Press, 2006)}.}.
+  Bloomsbury Academic, 2023)}.} and Jan Whitaker.\footnote{\citeproc{ref-whitaker2006a}{\emph{Service
+  and Style} (New York: St. Martin's Press, 2006)}.}
 
 \bookmarksetup{startatroot}
 
@@ -2515,7 +2503,7 @@ but his shoulders and back were shaking from the sobs.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio]{images/Akou07cropped.jpg}
+{\centering \includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio,alt={Front page of the La Crosse Tribune, November 4, 1933}]{images/Akou07cropped.jpg}
 
 }
 
@@ -2567,9 +2555,9 @@ the next few chapters.
 
 For more information, see Peter D. Norton\footnote{\citeproc{ref-norton2011a}{\emph{Fighting
   Traffic: The Dawn of the Motor Age in the American City} (Boston: MIT
-  Press, 2011)}.} and Susan Strasser\footnote{\citeproc{ref-strasser1982a}{\emph{Never
+  Press, 2011)}.} and Susan Strasser.\footnote{\citeproc{ref-strasser1982a}{\emph{Never
   Done: A History of American Housework} (New York: Pantheon Books,
-  1982)}.}.
+  1982)}.}
 
 \bookmarksetup{startatroot}
 
@@ -2712,14 +2700,14 @@ ever did, it was probably too late to benefit Lila. Despite being part
 of a large family, Lila was generally on her own to find her way as a
 city girl.
 
-For more information, see Candi K. Cann\footnote{\citeproc{ref-cann2018a}{\emph{Dying
+For more information, see Candi K. Cann,\footnote{\citeproc{ref-cann2018a}{\emph{Dying
   to Eat: Cross-Cultural Perspectives on Food, Death, and the Afterlife}
-  (Lexington: University Press of Kentucky, 2018)}.}, Kenneth J. Doka,
+  (Lexington: University Press of Kentucky, 2018)}.} Kenneth J. Doka,
 ed.\footnote{\citeproc{ref-doka2014a}{\emph{Children Mourning, Mourning
-  Children} (Abingdon, United Kingdom: Taylor \& Francis, 2014)}.}, and
-Kate Sweeney\footnote{\citeproc{ref-sweeney2014a}{\emph{American
+  Children} (Abingdon, United Kingdom: Taylor \& Francis, 2014)}.} and
+Kate Sweeney.\footnote{\citeproc{ref-sweeney2014a}{\emph{American
   Afterlife: Encounters in the Customs of Mourning} (Athens: University
-  of Georgia Press, 2014)}.}.
+  of Georgia Press, 2014)}.}
 
 \bookmarksetup{startatroot}
 
@@ -2864,15 +2852,15 @@ It gives her relief from reality, but it also causes some trouble and
 disconnection in her real life. This foreshadows events to come.
 
 For more information, see U. S. Department of Commerce: Bureau of the
-Census\footnote{\citeproc{ref-census1930a}{(United States Government
+Census,\footnote{\citeproc{ref-census1930a}{(United States Government
   Printing Office, 1930; IPUMS USA, 2024),
-  \url{https://doi.org/10.18128/D010.V15.0}}.}, Dorothy Sue
-Cobble\footnote{\citeproc{ref-cobble2004a}{\emph{The Other Women's
+  \url{https://doi.org/10.18128/D010.V15.0}}.} Dorothy Sue
+Cobble,\footnote{\citeproc{ref-cobble2004a}{\emph{The Other Women's
   Movement: Workplace Justice and Social Rights in Modern America}
-  (Princeton University Press, 2004)}.}, Ward Wilbur
-Keesecker\footnote{\citeproc{ref-keesecker1934a}{\emph{The Legal Status
+  (Princeton University Press, 2004)}.} Ward Wilbur
+Keesecker,\footnote{\citeproc{ref-keesecker1934a}{\emph{The Legal Status
   of Married Women Teachers} (Washington, DC: US Department of the
-  Interior Office of Education, 1934)}.}, and Robert S. McElvaine,
+  Interior Office of Education, 1934)}.} and Robert S. McElvaine,
 ed.\footnote{\citeproc{ref-mcelvaine2009a}{\emph{Down and Out in the
   Great Depression: Letters from the Forgotten Man} (Chapel Hill:
   University of North Carolina Press, 2009)}.}
@@ -2916,7 +2904,7 @@ and a bad influence on his niece (Aunt Hattie's granddaughter).
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/Akou08.jpg}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Page eight of the La Crosse Tribune, October 4, 1935}]{images/Akou08.jpg}}
 
 }
 
@@ -2957,13 +2945,13 @@ caring, but is that enough? What will be her path in society?
 
 For more information, see Mary Bosworth, ed.\footnote{\citeproc{ref-bosworth2005a}{\emph{Encyclopedia
   of Prisons \& Correctional Facilities} (Thousand Oaks, California:
-  SAGE Publications, 2005)}.}, Lawrence J. Friedman and Mark D.
-McGarvie, eds.\footnote{\citeproc{ref-friedman2003a}{\emph{Charity,
-  Philanthropy, and Civility in American History} (Cambridge University
-  Press, 2003)}.}, and Ted Gup\footnote{\citeproc{ref-gup2010a}{\emph{A
-  Secret Gift: How One Man's Kindness---and a Trove of
-  Letters---Revealed the Hidden History of the Great Depression} (New
-  York: Penguin Publishing, 2010)}.}.
+  SAGE Publications, 2005)}.} Lawrence J. Friedman and Mark D. McGarvie,
+eds.\footnote{\citeproc{ref-friedman2003a}{\emph{Charity, Philanthropy,
+  and Civility in American History} (Cambridge University Press, 2003)}.}
+and Ted Gup.\footnote{\citeproc{ref-gup2010a}{\emph{A Secret Gift: How
+  One Man's Kindness---and a Trove of Letters---Revealed the Hidden
+  History of the Great Depression} (New York: Penguin Publishing,
+  2010)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3017,7 +3005,7 @@ that the man had died as police were lifting him into the ambulance.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{images/Akou09.jpg}
+{\centering \includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={Front page of the La Crosse Tribune, November 13, 1938}]{images/Akou09.jpg}
 
 }
 
@@ -3053,13 +3041,13 @@ secrets that nobody wanted to talk about. In this chapter, Lila is in
 her early teens. In her family's silence, she is forming her own ideas
 about how the world works.
 
-For more information, see Scott Beekman\footnote{\citeproc{ref-beekman2006a}{\emph{Ringside:
+For more information, see Scott Beekman,\footnote{\citeproc{ref-beekman2006a}{\emph{Ringside:
   A History of Professional Wrestling in America} (London: Bloomsbury,
-  2006)}.}, Jeffrey Sussman\footnote{\citeproc{ref-sussman2019a}{\emph{Boxing
+  2006)}.} Jeffrey Sussman,\footnote{\citeproc{ref-sussman2019a}{\emph{Boxing
   and the Mob: The Notorious History of the Sweet Science} (Lanham,
-  Maryland: Rowman, 2019)}.}, and Nicholas L. Syrett\footnote{\citeproc{ref-syrett2016a}{\emph{American
+  Maryland: Rowman, 2019)}.} and Nicholas L. Syrett.\footnote{\citeproc{ref-syrett2016a}{\emph{American
   Child Bride: A History of Minors and Marriage in the United States}
-  (Chapel Hill: University of North Carolina Press, 2016)}.}.
+  (Chapel Hill: University of North Carolina Press, 2016)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3099,7 +3087,7 @@ fabric strips.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.75\linewidth,height=\textheight,keepaspectratio]{images/Akou10recropped.jpg}
+{\centering \includegraphics[width=0.75\linewidth,height=\textheight,keepaspectratio,alt={Poster advertising the YWCA and Girl Reserves; Library of Congress Prints and Photographs Division, \# LC-USZC4-5551}]{images/Akou10recropped.jpg}
 
 }
 
@@ -3200,12 +3188,12 @@ In the 1930s and 1940s, ready-to-wear was not as common for women as it
 was for men. It would not have been unusual to hire a dressmaker or to
 make an outfit at home.
 
-For more information, see Jennifer Helgren\footnote{\citeproc{ref-helgren2022a}{\emph{The
+For more information, see Jennifer Helgren,\footnote{\citeproc{ref-helgren2022a}{\emph{The
   Camp Fire Girls: Gender, Race, and American Girlhood, 1910--1980}
-  (Lincoln: University of Nebraska Press, 2022)}.}, Jenna Weissman
-Joselit\footnote{\citeproc{ref-joselit2014a}{\emph{A Perfect Fit:
+  (Lincoln: University of Nebraska Press, 2022)}.} Jenna Weissman
+Joselit,\footnote{\citeproc{ref-joselit2014a}{\emph{A Perfect Fit:
   Clothes, Character, and the Promise of America} (New York: Henry Holt;
-  Company, 2014)}.}, and Nina Mjagkij and Margaret Spratt,
+  Company, 2014)}.} and Nina Mjagkij and Margaret Spratt,
 eds.\footnote{\citeproc{ref-mjagkij1997a}{\emph{Men and Women Adrift:
   The YMCA and the YWCA in the City} (New York University Press, 1997)}.}
 
@@ -3258,7 +3246,7 @@ adventure. There was no yellow brick road in La Crosse.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=1\linewidth,height=\textheight,keepaspectratio]{images/Akou11.jpeg}
+{\centering \includegraphics[width=1\linewidth,height=\textheight,keepaspectratio,alt={A busy street in downtown La Crosse, 1939; Library of Congress Prints and Photographs Division, \#LC-USF33-003068-M2}]{images/Akou11.jpeg}
 
 }
 
@@ -3326,12 +3314,12 @@ of short advertisements for ``girl wanted'' as a childminder or
 part-time housekeeper. The 1940 Census and telephone records reinforce
 just how many adult women in La Crosse were working outside of the home.
 
-For more information, see Akou\footnote{\citeproc{ref-akou2024a}{\emph{On
-  the Job}}.}, Ina Rae Hark, ed.\footnote{\citeproc{ref-hark2007a}{\emph{American
+For more information, see Akou,\footnote{\citeproc{ref-akou2024a}{\emph{On
+  the Job}}.} Ina Rae Hark, ed.\footnote{\citeproc{ref-hark2007a}{\emph{American
   Cinema of the 1930s: Themes and Variations} (New Brunswick, New
-  Jersey: Rutgers University Press, 2007)}.}, and Robert B.
-Ray\footnote{\citeproc{ref-ray2020a}{\emph{A Certain Tendency of the
-  Hollywood Cinema, 1930--1980} (Princeton University Press, 2020)}.}.
+  Jersey: Rutgers University Press, 2007)}.} and Robert B.
+Ray.\footnote{\citeproc{ref-ray2020a}{\emph{A Certain Tendency of the
+  Hollywood Cinema, 1930--1980} (Princeton University Press, 2020)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3479,14 +3467,14 @@ American author and journalist Franny Fern (1811--1872) is credited with
 coining the now-common advice, ``The way to a man's heart is through his
 stomach.''
 
-For more information, see Jay P. Dolan\footnote{\citeproc{ref-dolan2010a}{\emph{The
-  Irish Americans: A History} (New York: Bloomsbury USA, 2010)}.},
-Thomas D. Snyder\footnote{\citeproc{ref-snyder1993a}{\emph{120 Years of
+For more information, see Jay P. Dolan,\footnote{\citeproc{ref-dolan2010a}{\emph{The
+  Irish Americans: A History} (New York: Bloomsbury USA, 2010)}.} Thomas
+D. Snyder,\footnote{\citeproc{ref-snyder1993a}{\emph{120 Years of
   American Education: A Statistical Portrait} (Washington, DC: U.S.
-  Department of Education, 1993)}.}, Syrett\footnote{\citeproc{ref-syrett2016a}{\emph{American
-  Child Bride}}.}, and Joyce W. Warren\footnote{\citeproc{ref-warren1992a}{\emph{Franny
+  Department of Education, 1993)}.} Syrett,\footnote{\citeproc{ref-syrett2016a}{\emph{American
+  Child Bride}}.} and Joyce W. Warren.\footnote{\citeproc{ref-warren1992a}{\emph{Franny
   Fern: An Independent Woman} (New Brunswick, New Jersey: Rutgers
-  University Press, 1992)}.}.
+  University Press, 1992)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3594,17 +3582,17 @@ missing out on happy times like family weddings. Her body is changing
 into a more adult (and slender) form; she feels beautiful in a new
 dress, paid for by her own hard work.
 
-For more information, see Beth L. Bailey\footnote{\citeproc{ref-bailey1989a}{\emph{From
+For more information, see Beth L. Bailey,\footnote{\citeproc{ref-bailey1989a}{\emph{From
   Front Porch to Back Seat: Courtship in Twentieth-Century America}
-  (Baltimore: Johns Hopkins University Press, 1989)}.}, Rick March and
-Dick Blau\footnote{\citeproc{ref-march2015a}{\emph{Polka Heartland: Why
+  (Baltimore: Johns Hopkins University Press, 1989)}.} Rick March and
+Dick Blau,\footnote{\citeproc{ref-march2015a}{\emph{Polka Heartland: Why
   the Midwest Loves to Polka} (Madison: Wisconsin Historical Society
-  Press, 2015)}.}, Randy D. McBee\footnote{\citeproc{ref-mcbee2000a}{\emph{Dance
+  Press, 2015)}.} Randy D. McBee,\footnote{\citeproc{ref-mcbee2000a}{\emph{Dance
   Hall Days: Intimacy and Leisure Among Working-Class Immigrants in the
-  United States} (New York: New York University Press, 2000)}.}, and
-Carol Wallace\footnote{\citeproc{ref-wallace2004a}{\emph{All Dressed in
+  United States} (New York: New York University Press, 2000)}.} and
+Carol Wallace.\footnote{\citeproc{ref-wallace2004a}{\emph{All Dressed in
   White: The Irresistible Rise of the American Wedding} (New York:
-  Penguin Books, 2004)}.}.
+  Penguin Books, 2004)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3698,7 +3686,7 @@ children eventually, but was that enough for her?
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio]{images/Akou12.jpg}
+{\centering \includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio,alt={Lila (middle of the back row) as a sophomore in 1939 with some of her classmates at Logan High School}]{images/Akou12.jpg}
 
 }
 
@@ -3743,15 +3731,15 @@ were open to women (for example, in the Electric Auto Lite factory);
 however, as far as I can tell, Lila's mother and sisters (Izro and Veda)
 never worked for pay outside of the home once they were married.
 
-For more information, see Ann K. Finkbeiner\footnote{\citeproc{ref-finkbeiner2012a}{\emph{After
+For more information, see Ann K. Finkbeiner,\footnote{\citeproc{ref-finkbeiner2012a}{\emph{After
   the Death of a Child: Living with Loss Through the Years} (New York:
-  Free Press, 2012)}.}, Claudia Goldin\footnote{\citeproc{ref-goldin2021a}{\emph{Career
+  Free Press, 2012)}.} Claudia Goldin,\footnote{\citeproc{ref-goldin2021a}{\emph{Career
   and Family: Women's Century-Long Journey Toward Equity} (Princeton
-  University Press, 2021)}.}, David M. Oshinsky\footnote{\citeproc{ref-oshinsky2005a}{\emph{Polio:
-  An American Story} (Oxford University Press, 2005)}.}, and Naomi
-Schaefer Riley\footnote{\citeproc{ref-riley2013a}{\emph{'Til Faith Do Us
-  Part: How Interfaith Marriage Is Transforming America} (Oxford
-  University Press, 2013)}.}.
+  University Press, 2021)}.} David M. Oshinsky,\footnote{\citeproc{ref-oshinsky2005a}{\emph{Polio:
+  An American Story} (Oxford University Press, 2005)}.} and Naomi
+Schaefer Riley.\footnote{\citeproc{ref-riley2013a}{\emph{'Til Faith Do
+  Us Part: How Interfaith Marriage Is Transforming America} (Oxford
+  University Press, 2013)}.}
 
 \bookmarksetup{startatroot}
 
@@ -3863,15 +3851,14 @@ making clothing out of feed sacks and flour sacks, which were often
 printed with paper labels or ink that could easily be washed out. Lila
 might have seen flour sack dresses when visiting extended family.
 
-For more information, see Vicki Howard\footnote{\citeproc{ref-howard2008a}{\emph{Brides,
+For more information, see Vicki Howard,\footnote{\citeproc{ref-howard2008a}{\emph{Brides,
   Inc.: American Weddings and the Business of Tradition} (Philadelphia:
-  University of Pennsylvania Press, 2008)}.}, Samanta
-Leonard\footnote{\citeproc{ref-leonard2019a}{\emph{Groomed: Shining a
-  Light on the Unheard Narrative of Childhood Sexual Assault}
-  (Washington, DC: New Degree Press, 2019)}.}, and Susan
-Miller\footnote{\citeproc{ref-miller2007a}{\emph{Vintage Feed Sacks:
+  University of Pennsylvania Press, 2008)}.} Samanta Leonard,\footnote{\citeproc{ref-leonard2019a}{\emph{Groomed:
+  Shining a Light on the Unheard Narrative of Childhood Sexual Assault}
+  (Washington, DC: New Degree Press, 2019)}.} and Susan
+Miller.\footnote{\citeproc{ref-miller2007a}{\emph{Vintage Feed Sacks:
   Fabric from the Farm} (Lancaster, Pennsylvania: Schiffer Publishing,
-  2007)}.}.
+  2007)}.}
 
 \bookmarksetup{startatroot}
 
@@ -4007,13 +3994,13 @@ United States.
 
 For more information, see Ellen C. Kearns and Monica Gallagher,
 eds.\footnote{\citeproc{ref-kearns1999a}{\emph{The Fair Labor Standards
-  Act} (Washington, DC: Bureau of National Affairs, 1999)}.},
-Loewen\footnote{\citeproc{ref-loewen2018a}{\emph{Sundown Town}}.},
-Martin Ottenheimer\footnote{\citeproc{ref-ottenheimer1996a}{\emph{Forbidden
+  Act} (Washington, DC: Bureau of National Affairs, 1999)}.}
+Loewen,\footnote{\citeproc{ref-loewen2018a}{\emph{Sundown Town}}.}
+Martin Ottenheimer,\footnote{\citeproc{ref-ottenheimer1996a}{\emph{Forbidden
   Relatives: The American Myth of Cousin Marriage} (Champaign:
-  University of Illinois Press, 1996)}.}, and Phyllis Palmer\footnote{\citeproc{ref-palmer2010a}{\emph{Domesticity
+  University of Illinois Press, 1996)}.} and Phyllis Palmer.\footnote{\citeproc{ref-palmer2010a}{\emph{Domesticity
   and Dirt: Housewives and Domestic Servants in the United States,
-  1920--1945} (Philadelphia: Temple University Press, 2010)}.}.
+  1920--1945} (Philadelphia: Temple University Press, 2010)}.}
 
 \bookmarksetup{startatroot}
 
@@ -4157,7 +4144,7 @@ of gold with a square ruby and two tiny diamonds.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio]{images/Akou13.jpg}
+{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio,alt={Page 4 of the La Crosse Tribune, December 30, 1941}]{images/Akou13.jpg}
 
 }
 
@@ -4218,11 +4205,11 @@ is striking.
 The Internet is full of historical examples of jokes; I just adapted one
 that I thought was especially appropriate for Lloyd and Wisconsin.
 
-For more information, see Bailey\footnote{\citeproc{ref-bailey1989a}{\emph{From
-  Front Porch to Back Seat}}.}, Kenneth Rose\footnote{\citeproc{ref-rose2012a}{\emph{Myth
+For more information, see Bailey,\footnote{\citeproc{ref-bailey1989a}{\emph{From
+  Front Porch to Back Seat}}.} Kenneth Rose,\footnote{\citeproc{ref-rose2012a}{\emph{Myth
   and the Greatest Generation: A Social History of Americans in World
-  War II} (New York: Routledge, 2012)}.}, and Carol Wyman\footnote{\citeproc{ref-wyman2001a}{\emph{Jell-o:
-  A Biography} (San Diego, California: Harcourt, 2001)}.}.
+  War II} (New York: Routledge, 2012)}.} and Carol Wyman.\footnote{\citeproc{ref-wyman2001a}{\emph{Jell-o:
+  A Biography} (San Diego, California: Harcourt, 2001)}.}
 
 \bookmarksetup{startatroot}
 
@@ -4272,7 +4259,7 @@ imagined how much it would cheer Lloyd up to receive a letter from her.
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/Akou14rt.jpg}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={Postcard of Wisconsin State Prison in Waupun, where Lloyd was sent in the 1940s}]{images/Akou14rt.jpg}}
 
 }
 
@@ -4394,14 +4381,14 @@ out and did not intend to live there again). The moving process brought
 up all kinds of difficult feelings surrounding what to keep or get rid
 of and who should have it (me, my sister, or my parents).
 
-For more information, see Jennifer L. Adams\footnote{\citeproc{ref-adams2023a}{\emph{An
+For more information, see Jennifer L. Adams,\footnote{\citeproc{ref-adams2023a}{\emph{An
   Autoethnography of Letter Writing and Relationships Through Time:
-  Finding Our Perfect Moon} (New York: Routledge, 2023)}.}, David
-Celani\footnote{\citeproc{ref-celani2011a}{\emph{Leaving Home: The Art
+  Finding Our Perfect Moon} (New York: Routledge, 2023)}.} David
+Celani,\footnote{\citeproc{ref-celani2011a}{\emph{Leaving Home: The Art
   of Separating from Your Difficult Family} (New York: Columbia
-  University Press, 2011)}.}, and Sheila Isenberg\footnote{\citeproc{ref-isenberg2021a}{\emph{Women
+  University Press, 2011)}.} and Sheila Isenberg.\footnote{\citeproc{ref-isenberg2021a}{\emph{Women
   Who Love Men Who Kill: 35 True Stories of Prison Passion} (New York:
-  Diversion Books, 2021)}.}.
+  Diversion Books, 2021)}.}
 
 \bookmarksetup{startatroot}
 
@@ -4550,14 +4537,14 @@ divorce) that older members of the Slaback family were unaware of. The
 usefulness of their advice was probably very limited at times.
 
 For more information, see Geoffrey L. Greif and Michael E.
-Woolley\footnote{\citeproc{ref-greif2015a}{\emph{Adult Sibling
-  Relationships} (New York: Columbia University Press, 2015)}.}, Eva
-Illouz\footnote{\citeproc{ref-illouz2023a}{\emph{Consuming the Romantic
+Woolley,\footnote{\citeproc{ref-greif2015a}{\emph{Adult Sibling
+  Relationships} (New York: Columbia University Press, 2015)}.} Eva
+Illouz,\footnote{\citeproc{ref-illouz2023a}{\emph{Consuming the Romantic
   Utopia: Love and Cultural Contradictions of Capitalism} (Berkeley:
-  University of California Press, 2023)}.}, and Susan K. Pfeifer and
-Marvin B. Sussman\footnote{\citeproc{ref-pfeifer2014a}{\emph{Families:
+  University of California Press, 2023)}.} and Susan K. Pfeifer and
+Marvin B. Sussman.\footnote{\citeproc{ref-pfeifer2014a}{\emph{Families:
   Intergenerational and Generational Connections} (New York: Routledge,
-  2014)}.}.
+  2014)}.}
 
 \bookmarksetup{startatroot}
 
@@ -4693,15 +4680,15 @@ the writing process, I had a great conversation with a distant cousin
 (Linda Wood) about her mother's experience as a young woman in West
 Salem. She often went to parties at Fort McCoy and married a veteran.
 
-For more information, see Dorothy Cobble\footnote{\citeproc{ref-cobble1992a}{\emph{Dishing
+For more information, see Dorothy Cobble,\footnote{\citeproc{ref-cobble1992a}{\emph{Dishing
   It Out: Waitresses and Their Unions in the Twentieth Century}
-  (Champaign: University of Illinois Press, 1992)}.}, Linda M.
-Fournier\footnote{\citeproc{ref-fournier2008a}{\emph{Fort McCoy} (Mount
-  Pleasant: Arcadia Publishing, 2008)}.}, Karen
-Plunkett-Powell\footnote{\citeproc{ref-plunkett-powell2014a}{\emph{Remembering
+  (Champaign: University of Illinois Press, 1992)}.} Linda M.
+Fournier,\footnote{\citeproc{ref-fournier2008a}{\emph{Fort McCoy} (Mount
+  Pleasant: Arcadia Publishing, 2008)}.} Karen
+Plunkett-Powell,\footnote{\citeproc{ref-plunkett-powell2014a}{\emph{Remembering
   Woolworth's: A Nostalgic History of the World's Most Famous
-  Five-and-Dime} (New York: St. Martin's Publishing Group, 2014)}.}, and
-Joselit\footnote{\citeproc{ref-joselit2014a}{\emph{A Perfect Fit}}.}.
+  Five-and-Dime} (New York: St. Martin's Publishing Group, 2014)}.} and
+Joselit.\footnote{\citeproc{ref-joselit2014a}{\emph{A Perfect Fit}}.}
 
 \bookmarksetup{startatroot}
 
@@ -4843,7 +4830,7 @@ the image that she understood the joke.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.65\linewidth,height=\textheight,keepaspectratio]{images/Akou15.jpg}
+{\centering \includegraphics[width=0.65\linewidth,height=\textheight,keepaspectratio,alt={Lila as a young working woman, circa 1943}]{images/Akou15.jpg}
 
 }
 
@@ -4933,13 +4920,13 @@ insight into two things:
 She is not eager to become a mother, but she is also sad (maybe even a
 bit angry) that Jean has been forced to give away her child.
 
-For more information, see Ylva Baeckström\footnote{\citeproc{ref-baeckstruxf6m2022a}{\emph{Gender
+For more information, see Ylva Baeckström,\footnote{\citeproc{ref-baeckstruxf6m2022a}{\emph{Gender
   and Finance: Addressing Inequality in the Financial Services Industry}
-  (London: Taylor \& Francis, 2022)}.}, Stephanie Lynn Budin\footnote{\citeproc{ref-budin2021a}{\emph{Freewomen,
+  (London: Taylor \& Francis, 2022)}.} Stephanie Lynn Budin,\footnote{\citeproc{ref-budin2021a}{\emph{Freewomen,
   Patriarchal Authority, and the Accusation of Prostitution} (London:
-  Taylor \& Francis, 2021)}.}, and John C. Spurlock\footnote{\citeproc{ref-spurlock2015a}{\emph{Youth
+  Taylor \& Francis, 2021)}.} and John C. Spurlock.\footnote{\citeproc{ref-spurlock2015a}{\emph{Youth
   and Sexuality in the Twentieth-Century United States} (London: Taylor
-  \& Francis, 2015)}.}.
+  \& Francis, 2015)}.}
 
 \bookmarksetup{startatroot}
 
@@ -5112,12 +5099,12 @@ heading off to war.
 The timeline is accurate for the conception of Lila's first real-life
 child, Myrtle.
 
-For more information, see Evan Bachner\footnote{\citeproc{ref-bachner2008a}{\emph{Making
-  WAVES: Navy Women of World War II} (New York: Harry N. Abrams, 2008)}.},
-Kathrina Glitre\footnote{\citeproc{ref-glitre2013a}{\emph{Hollywood
+For more information, see Evan Bachner,\footnote{\citeproc{ref-bachner2008a}{\emph{Making
+  WAVES: Navy Women of World War II} (New York: Harry N. Abrams, 2008)}.}
+Kathrina Glitre,\footnote{\citeproc{ref-glitre2013a}{\emph{Hollywood
   Romantic Comedy: States of Union, 1934--1965} (Manchester University
-  Press, 2013)}.}, and Larry King\footnote{\citeproc{ref-king2001a}{\emph{Love
-  Stories of World War II} (New York: Crown Publishing, 2001)}.}.
+  Press, 2013)}.} and Larry King.\footnote{\citeproc{ref-king2001a}{\emph{Love
+  Stories of World War II} (New York: Crown Publishing, 2001)}.}
 
 \bookmarksetup{startatroot}
 
@@ -5125,7 +5112,7 @@ Kathrina Glitre\footnote{\citeproc{ref-glitre2013a}{\emph{Hollywood
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.75\linewidth,height=\textheight,keepaspectratio]{images/Akou16.JPG}
+{\centering \includegraphics[width=0.75\linewidth,height=\textheight,keepaspectratio,alt={Lila, circa 1948. In the center is her oldest daughter, Myrtle Joyce. Her son, John, is sitting in her lap. Standing on her left are Veda's children, Patty and David.}]{images/Akou16.JPG}
 
 }
 
@@ -5133,10 +5120,11 @@ Kathrina Glitre\footnote{\citeproc{ref-glitre2013a}{\emph{Hollywood
 oldest daughter, Myrtle Joyce. Her son, John, is sitting in her lap.
 Standing on her left are Veda's children, Patty and David.}
 
-\end{figure}%%
+\end{figure}%
+
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{images/Akou17.jpeg}
+{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={I developed this genealogical chart using data from ancestry.com. It does not include most of Lila's children, because Herman only fathered her second and third children (John and Alice). Alice was my mother.}]{images/Akou17.jpeg}
 
 }
 
@@ -5202,7 +5190,7 @@ Veda's name and address before she fell asleep again.
 
 \begin{figure}[H]
 
-{\centering \pandocbounded{\includegraphics[keepaspectratio]{images/Akou18.jpg}}
+{\centering \pandocbounded{\includegraphics[keepaspectratio,alt={A postcard of St.~Francis Hospital from the 1920s; it was the first major hospital in La Crosse, established by the Catholic Church in 1883.}]{images/Akou18.jpg}}
 
 }
 
@@ -5354,16 +5342,16 @@ was somewhere else. The imagery of the hospital and nursing staff is
 based on my research on the history of work uniforms (including medical
 uniforms).
 
-For more information, see David G. Hogan\footnote{\citeproc{ref-hogan1999a}{\emph{Selling
+For more information, see David G. Hogan,\footnote{\citeproc{ref-hogan1999a}{\emph{Selling
   'Em by the Sack: White Castle and the Creation of American Food} (New
-  York University Press, 1999)}.}, Carin Modh, Ingela Lundgren, and
-Ingegerd Bergbom\footnote{\citeproc{ref-modh2011a}{{``First Time
+  York University Press, 1999)}.} Carin Modh, Ingela Lundgren, and
+Ingegerd Bergbom,\footnote{\citeproc{ref-modh2011a}{{``First Time
   Pregnant Women's Experiences in Early Pregnancy,''}
   \emph{International Journal of Qualitative Studies in Health and
   Well-Being} 6, no. 2 (2011),
-  \url{https://doi.org/10.3402/qhw.v6i2.5600}}.}, and June Price Tangney
-and Ronda L. Dearing\footnote{\citeproc{ref-tangney2002a}{\emph{Shame
-  and Guilt} (New York: Guilford Publications, 2002)}.}.
+  \url{https://doi.org/10.3402/qhw.v6i2.5600}}.} and June Price Tangney
+and Ronda L. Dearing.\footnote{\citeproc{ref-tangney2002a}{\emph{Shame
+  and Guilt} (New York: Guilford Publications, 2002)}.}
 
 \bookmarksetup{startatroot}
 
@@ -5488,9 +5476,9 @@ passive-aggressive.
 For more information, see Kay Goldman\footnote{\citeproc{ref-goldman2013a}{\emph{Dressing
   Modern Maternity: The Frankfurt Sisters of Dallas and the Page Boy
   Label} (Lubbock: Texas Tech University Press, 2013)}.} and Pamela
-Regis\footnote{\citeproc{ref-regis2013a}{\emph{A Natural History of the
+Regis.\footnote{\citeproc{ref-regis2013a}{\emph{A Natural History of the
   Romance Novel} (Philadelphia: University of Pennsylvania Press,
-  2013)}.}.
+  2013)}.}
 
 \bookmarksetup{startatroot}
 
@@ -5672,13 +5660,13 @@ professional jazz musician who seems to save all of his self-expression
 for his musical performances. Through no fault of their own, some people
 are very difficult to know.
 
-For more information, see Hamlin Garland\footnote{\citeproc{ref-garland1917a}{\emph{A
-  Son of the Middle Border} (New York: Macmillan Company, 1917)}.},
+For more information, see Hamlin Garland,\footnote{\citeproc{ref-garland1917a}{\emph{A
+  Son of the Middle Border} (New York: Macmillan Company, 1917)}.}
 Pamela Riney-Kehrberg, ed.\footnote{\citeproc{ref-riney-kehrberg2016a}{\emph{The
-  Routledge History of Rural America} (New York: Routledge, 2016)}.},
-and Lydia Semler, Jana Hill, and Ilea Magdelina Bonner\footnote{\citeproc{ref-semler2024a}{\emph{A
+  Routledge History of Rural America} (New York: Routledge, 2016)}.} and
+Lydia Semler, Jana Hill, and Ilea Magdelina Bonner.\footnote{\citeproc{ref-semler2024a}{\emph{A
   History of Maternity Wear: Design, Patterns, and Construction} (New
-  York: Routledge, 2024)}.}.
+  York: Routledge, 2024)}.}
 
 \bookmarksetup{startatroot}
 
@@ -5899,13 +5887,13 @@ what alternatives does Lila really have? Veda's husband, Red, is also
 forcing Veda to take sides (his side) by shaming Lila and holding Veda
 back.
 
-For more information, see Boris Emmet and John E. Jeuck\footnote{\citeproc{ref-emmet1950a}{\emph{Catalogues
+For more information, see Boris Emmet and John E. Jeuck,\footnote{\citeproc{ref-emmet1950a}{\emph{Catalogues
   and Counters: A History of Sears, Roebuck and Company} (University of
-  Chicago Press, 1950)}.}, Alecia Swasy\footnote{\citeproc{ref-swasy2012a}{\emph{Soap
+  Chicago Press, 1950)}.} Alecia Swasy,\footnote{\citeproc{ref-swasy2012a}{\emph{Soap
   Opera: The Inside Story of Procter \& Gamble} (New York: Crown
-  Publishing, 2012)}.}, and Richard H. Zeitlin\footnote{\citeproc{ref-zeitlin2013a}{\emph{Germans
+  Publishing, 2012)}.} and Richard H. Zeitlin.\footnote{\citeproc{ref-zeitlin2013a}{\emph{Germans
   in Wisconsin}, 2nd ed. (Madison: Wisconsin Historical Society Press,
-  2013)}.}.
+  2013)}.}
 
 \bookmarksetup{startatroot}
 
@@ -6051,7 +6039,7 @@ corner.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{images/Akou19.jpg}
+{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={Advertisement for Fields on Page Three of the La Crosse Tribune, September 10th, 1944}]{images/Akou19.jpg}
 
 }
 
@@ -6101,7 +6089,7 @@ attend her wedding.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{images/Akou20.jpeg}
+{\centering \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio,alt={Self-portrait that Myrtle gave to Lila around the time of her marriage in 1944; the handwritten inscription says, ``Love to Lila, From Myrtle''}]{images/Akou20.jpeg}
 
 }
 
@@ -6139,13 +6127,13 @@ nearby (Fort McCoy), I imagine there were a lot of brides in La Crosse
 who needed quick wedding dresses in the 1940s. I bought a 1939 copy of
 the \emph{Wedding Embassy Yearbook} online from a used bookseller.
 
-For more information, see Cutright. Phillips\footnote{\citeproc{ref-cutright1972a}{{``Historical
+For more information, see Cutright. Phillips,\footnote{\citeproc{ref-cutright1972a}{{``Historical
   and Contemporary Trends in Illegitimacy,''} \emph{Archives of Sexual
-  Behavior} 2, no. 2 (1972): 97--118}.}, Howard\footnote{\citeproc{ref-howard2008a}{\emph{Brides,
-  Inc.}}}, Judith Walzer Leavitt\footnote{\citeproc{ref-leavitt2016a}{\emph{Brought
+  Behavior} 2, no. 2 (1972): 97--118}.} Howard,\footnote{\citeproc{ref-howard2008a}{\emph{Brides,
+  Inc.}}} Judith Walzer Leavitt,\footnote{\citeproc{ref-leavitt2016a}{\emph{Brought
   to Bed: Childbearing in America, 1750--1950} (Oxford University Press,
-  2016)}.}, and York\footnote{\citeproc{ref-york2012a}{\emph{Bridal
-  Fashion 1900--1950}}.}.
+  2016)}.} and York.\footnote{\citeproc{ref-york2012a}{\emph{Bridal
+  Fashion 1900--1950}}.}
 
 \bookmarksetup{startatroot}
 
@@ -6195,7 +6183,7 @@ suit.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{images/Akou21edit.jpg}
+{\centering \includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio,alt={Herman and Lila Schneider on their wedding day, October 14, 1944}]{images/Akou21edit.jpg}
 
 }
 
@@ -6392,15 +6380,15 @@ vacation time, Herman and Lila could not afford a honeymoon. In this
 chapter, Lila is immediately confronted with the pleasures and
 difficulties of farm life.
 
-For more information, see Sylvia M. Henderson\footnote{\citeproc{ref-henderson2001a}{{``Baumkuchen,''}
-  \emph{Gastronomica} 1, no. 2 (2001): 90--92}.}, Katherine
-Jellison\footnote{\citeproc{ref-jellison2008a}{\emph{It's Our Day:
+For more information, see Sylvia M. Henderson,\footnote{\citeproc{ref-henderson2001a}{{``Baumkuchen,''}
+  \emph{Gastronomica} 1, no. 2 (2001): 90--92}.} Katherine
+Jellison,\footnote{\citeproc{ref-jellison2008a}{\emph{It's Our Day:
   America's Love Affair with the White Wedding, 1945--2005} (Lawrence:
-  University Press of Kansas, 2008)}.}, Lowry Nelson\footnote{\citeproc{ref-nelson1954a}{\emph{American
-  Farm Life} (Cambridge: Harvard University Press, 1954)}.}, and Rachel
-Ann Rosenfeld\footnote{\citeproc{ref-rosenfeld2017a}{\emph{Farm Women:
+  University Press of Kansas, 2008)}.} Lowry Nelson,\footnote{\citeproc{ref-nelson1954a}{\emph{American
+  Farm Life} (Cambridge: Harvard University Press, 1954)}.} and Rachel
+Ann Rosenfeld.\footnote{\citeproc{ref-rosenfeld2017a}{\emph{Farm Women:
   Work, Farm, and Family in the United States} (Chapel Hill: University
-  of North Carolina Press, 2017)}.}.
+  of North Carolina Press, 2017)}.}
 
 \bookmarksetup{startatroot}
 
@@ -6552,15 +6540,14 @@ activities. This chapter draws on my own experience of fitting into a
 religious community that is completely different from the one where I
 grew up.
 
-For more information, see Carolyn M. Goldstein\footnote{\citeproc{ref-goldstein2012a}{\emph{Creating
+For more information, see Carolyn M. Goldstein,\footnote{\citeproc{ref-goldstein2012a}{\emph{Creating
   Consumers: Home Economists in Twentieth-Century America} (Chapel Hill:
-  University of North Carolina Press, 2012)}.}, Lincoln A.
-Mullen\footnote{\citeproc{ref-mullen2017a}{\emph{The Chance of
+  University of North Carolina Press, 2012)}.} Lincoln A.
+Mullen,\footnote{\citeproc{ref-mullen2017a}{\emph{The Chance of
   Salvation: A History of Conversion in America} (Cambridge: Harvard
-  University Press, 2017)}.}, and Raymond DeVries et al.,
-eds.\footnote{\citeproc{ref-devries2001a}{\emph{Birth by Design:
-  Pregnancy, Maternity Care, and Midwifery in North America and Europe}
-  (New York: Routledge, 2001)}.}
+  University Press, 2017)}.} and Raymond DeVries et al., eds.\footnote{\citeproc{ref-devries2001a}{\emph{Birth
+  by Design: Pregnancy, Maternity Care, and Midwifery in North America
+  and Europe} (New York: Routledge, 2001)}.}
 
 \bookmarksetup{startatroot}
 
@@ -6668,16 +6655,16 @@ her nostalgic for city life. This is foreshadowing for upcoming
 chapters.
 
 For more information, see Federal Highway Administration Office of
-Highway Information Management\footnote{\citeproc{ref-fwha1997a}{{``Highway
+Highway Information Management,\footnote{\citeproc{ref-fwha1997a}{{``Highway
   Statistics Summary to 1995''} (Washington, DC: Federal Highway
   Administration, 1997),
-  \url{https://www.fhwa.dot.gov/ohim/summary95/dl230.pdf}}.}, Charles J.
-Kahane\footnote{\citeproc{ref-kahane1986a}{{``An Evaluation of Child
+  \url{https://www.fhwa.dot.gov/ohim/summary95/dl230.pdf}}.} Charles J.
+Kahane,\footnote{\citeproc{ref-kahane1986a}{{``An Evaluation of Child
   Passenger Safety: The Effectiveness and Benefits of Safety Seats''}
   (Washington, DC: National Highway Traffic Safety Administration,
-  1986)}.}, and Ralph Nader\footnote{\citeproc{ref-nader1965a}{\emph{Unsafe
+  1986)}.} and Ralph Nader.\footnote{\citeproc{ref-nader1965a}{\emph{Unsafe
   at Any Speed: The Designed-in Dangers of the American Automobile} (New
-  York: Grossman Publishers, 1965)}.}.
+  York: Grossman Publishers, 1965)}.}
 
 \bookmarksetup{startatroot}
 
@@ -6783,12 +6770,12 @@ reconnected in real life, but this scene gives us more insight into how
 Lila feels about the city and her life before marriage. She misses
 feeling carefree and sexually desirable.
 
-For more information, see Chad Heap\footnote{\citeproc{ref-heap2009a}{\emph{Slumming:
+For more information, see Chad Heap,\footnote{\citeproc{ref-heap2009a}{\emph{Slumming:
   Sexual and Racial Encounters in American Nightlife, 1885--1940}
-  (University of Chicago Press, 2009)}.}, McBee\footnote{\citeproc{ref-mcbee2000a}{\emph{Dance
-  Hall Days}}.}, and Christina Simmons\footnote{\citeproc{ref-simmons2009a}{\emph{Making
+  (University of Chicago Press, 2009)}.} McBee,\footnote{\citeproc{ref-mcbee2000a}{\emph{Dance
+  Hall Days}}.} and Christina Simmons.\footnote{\citeproc{ref-simmons2009a}{\emph{Making
   Marriage Modern: Women's Sexuality from the Progressive Era to World
-  War II} (Oxford University Press, 2009)}.}.
+  War II} (Oxford University Press, 2009)}.}
 
 \bookmarksetup{startatroot}
 
@@ -6879,7 +6866,7 @@ death do us part.''
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio]{images/Akou22.JPG}
+{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio,alt={Lila (back) and Myrtle Schneider (front) circa 1946; used by permission of June Lewis}]{images/Akou22.JPG}
 
 }
 
@@ -6906,12 +6893,12 @@ family in Wisconsin in the 1940s. Although both men and women could seek
 a divorce, the state required them to publish the cause (such as ``cruel
 and inhuman treatment'') in the local newspaper.
 
-For more information, see Kristin Celello\footnote{\citeproc{ref-celello2009a}{\emph{Making
+For more information, see Kristin Celello,\footnote{\citeproc{ref-celello2009a}{\emph{Making
   Marriages Work: A History of Marriage and Divorce in the
   Twentieth-Century United States} (Chapel Hill: University of North
-  Carolina Press, 2009)}.}, Joseph A. Ranney\footnote{\citeproc{ref-ranney1998a}{{``Traditional
+  Carolina Press, 2009)}.} Joseph A. Ranney,\footnote{\citeproc{ref-ranney1998a}{{``Traditional
   Values and No-Fault Divorce''} (Wisconsin Court System, 1998),
-  \url{https://www.wicourts.gov/courts/history/article45.htm}}.}, and
+  \url{https://www.wicourts.gov/courts/history/article45.htm}}.} and
 Scott J. South and Stewart E. Tolnay, eds.\footnote{\citeproc{ref-south1992a}{\emph{The
   Changing American Family: Sociological and Demographic Perspectives}
   (Abingdon, UK: Taylor \& Francis, 1992)}.}
@@ -7071,14 +7058,14 @@ fascinated by the color of Camay. In the 1940s and 1950s, using
 commercial bar soap in the bathroom was a solid marker of middle-class
 life. In rural areas, it was still a luxury for many families.
 
-For more information, see Lauren K. Hall\footnote{\citeproc{ref-hall2019a}{\emph{The
+For more information, see Lauren K. Hall,\footnote{\citeproc{ref-hall2019a}{\emph{The
   Medicalization of Birth and Death} (Baltimore: Johns Hopkins
-  University Press, 2019)}.}, Regina G. Kunzel\footnote{\citeproc{ref-kunzel1993a}{\emph{Fallen
+  University Press, 2019)}.} Regina G. Kunzel,\footnote{\citeproc{ref-kunzel1993a}{\emph{Fallen
   Women, Problem Girls: Unmarried Mothers and the Professionalization of
-  Social Work, 1890--1945} (New Haven: Yale, 1993)}.}, Swasy\footnote{\citeproc{ref-swasy2012a}{\emph{Soap
-  Opera}}.}, and Terence Young\footnote{\citeproc{ref-young2017a}{\emph{Heading
+  Social Work, 1890--1945} (New Haven: Yale, 1993)}.} Swasy,\footnote{\citeproc{ref-swasy2012a}{\emph{Soap
+  Opera}}.} and Terence Young.\footnote{\citeproc{ref-young2017a}{\emph{Heading
   Out: A History of American Camping} (Ithaca: Cornell University Press,
-  2017)}.}.
+  2017)}.}
 
 \bookmarksetup{startatroot}
 
@@ -7274,13 +7261,13 @@ Rural mail delivery was not guaranteed by the U.S. Postal Service until
 1902. Even then, rural mail carriers were allowed certain flexibilities
 that urban carriers were not.
 
-For more information, see Winifred Gallagher\footnote{\citeproc{ref-gallagher2016a}{\emph{How
+For more information, see Winifred Gallagher,\footnote{\citeproc{ref-gallagher2016a}{\emph{How
   the Post Office Created America: A History} (New York: Penguin
-  Publishing, 2016)}.}, Chelsia Harris\footnote{\citeproc{ref-harris2018a}{\emph{Hannah
+  Publishing, 2016)}.} Chelsia Harris,\footnote{\citeproc{ref-harris2018a}{\emph{Hannah
   Visits Nana in the Nursing Home} (Meadville: Christian Faith
-  Publishing, 2018)}.}, and Esther Perel\footnote{\citeproc{ref-perel2017a}{\emph{The
+  Publishing, 2018)}.} and Esther Perel.\footnote{\citeproc{ref-perel2017a}{\emph{The
   State of Affairs: Rethinking Infidelity} (New York: HarperCollins
-  Publishers, 2017)}.}.
+  Publishers, 2017)}.}
 
 \bookmarksetup{startatroot}
 
@@ -7293,7 +7280,7 @@ a conversation with another adult.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{images/Akou23.jpg}
+{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={Farmland and bluffs in La Crosse County, Wisconsin; Library of Congress Prints and Photographs Division, \# LC-DIG-highsm-40479}]{images/Akou23.jpg}
 
 }
 
@@ -7416,13 +7403,13 @@ very different from my husband's. I never had an affair, but I
 understand why some people do. Like my grandfather, I found my (now
 former) husband difficult to know and connect with.
 
-For more information, see Jerry Apps\footnote{\citeproc{ref-apps2006a}{\emph{When
+For more information, see Jerry Apps,\footnote{\citeproc{ref-apps2006a}{\emph{When
   Chores Were Done: Boyhood Stories} (St. Paul: MBI Publishing Company,
-  2006)}.}, Peter Kennedy\footnote{\citeproc{ref-kennedy1984a}{\emph{Folksongs
-  of Britain and Ireland} (San Francisco: Oak Publications, 1984)}.},
-and Alvin Martin Peterson\footnote{\citeproc{ref-peterson1948a}{\emph{Palisades
+  2006)}.} Peter Kennedy,\footnote{\citeproc{ref-kennedy1984a}{\emph{Folksongs
+  of Britain and Ireland} (San Francisco: Oak Publications, 1984)}.} and
+Alvin Martin Peterson.\footnote{\citeproc{ref-peterson1948a}{\emph{Palisades
   and Coulees: The Scenic Mississippi Valley from Prairie Du Chien to
-  Red Wing} (Onalaska: Modern Print Company, 1948)}.}.
+  Red Wing} (Onalaska: Modern Print Company, 1948)}.}
 
 \bookmarksetup{startatroot}
 
@@ -7643,16 +7630,16 @@ away from her life with Herman. She doesn't really know what she wants;
 she only knows what she doesn't want. She takes a leap of faith into the
 unknown, but will she have the courage to stay there?
 
-For more information, see Thomas Joiner\footnote{\citeproc{ref-joiner2009a}{\emph{Why
-  People Die by Suicide} (Cambridge: Harvard University Press, 2009)}.},
+For more information, see Thomas Joiner,\footnote{\citeproc{ref-joiner2009a}{\emph{Why
+  People Die by Suicide} (Cambridge: Harvard University Press, 2009)}.}
 Peg A. Lamphier and Rosanne Welch, eds.\footnote{\citeproc{ref-lamphier2017a}{\emph{Women
   in American History: A Social, Political, and Cultural Encyclopedia
-  and Document Collection} (Oxford: Bloomsbury, 2017)}.}, Lynn
-Spigel\footnote{\citeproc{ref-spigel1992a}{\emph{Make Room for TV:
+  and Document Collection} (Oxford: Bloomsbury, 2017)}.} Lynn
+Spigel,\footnote{\citeproc{ref-spigel1992a}{\emph{Make Room for TV:
   Television and the Family Ideal in Postwar America} (University of
-  Chicago Press, 1992)}.}, and Evan Stark\footnote{\citeproc{ref-stark2009a}{\emph{Coercive
+  Chicago Press, 1992)}.} and Evan Stark.\footnote{\citeproc{ref-stark2009a}{\emph{Coercive
   Control: The Entrapment of Women in Personal Life} (Oxford University
-  Press, 2009)}.}.
+  Press, 2009)}.}
 
 \bookmarksetup{startatroot}
 
@@ -7826,14 +7813,14 @@ screaming, ``Mommy, my best friend, Mommy!'' It was heartbreaking. I
 recalled that memory as I imagined Lila having to say goodbye to her
 children for a second time.
 
-For more information, see Gary Alan Fine\footnote{\citeproc{ref-fine2008a}{\emph{Kitchens:
+For more information, see Gary Alan Fine,\footnote{\citeproc{ref-fine2008a}{\emph{Kitchens:
   The Culture of Restaurant Work} (Berkeley: University of California
-  Press, 2008)}.}, Greta Foff Paules\footnote{\citeproc{ref-paules1991a}{\emph{Dishing
+  Press, 2008)}.} Greta Foff Paules,\footnote{\citeproc{ref-paules1991a}{\emph{Dishing
   It Out: Power and Resistance Among Waitresses in a New Jersey
-  Restaurant} (Philadelphia: Temple University Press, 1991)}.}, and
-Valerie Polakow\footnote{\citeproc{ref-polakow1994a}{\emph{Lives on the
+  Restaurant} (Philadelphia: Temple University Press, 1991)}.} and
+Valerie Polakow.\footnote{\citeproc{ref-polakow1994a}{\emph{Lives on the
   Edge: Single Mothers and Their Children in the Other America}
-  (University of Chicago Press, 1994)}.}.
+  (University of Chicago Press, 1994)}.}
 
 \bookmarksetup{startatroot}
 
@@ -7950,10 +7937,10 @@ brothers from Idaho. I don't know the circumstances of her conception
 war that doesn't magically stop when soldiers return home.
 
 The experience of being raped has long-term consequences. As described
-by behavioral scientist Kathleen C. Basile\footnote{\citeproc{ref-basile2005a}{{``Sexual
+by behavioral scientist Kathleen C. Basile,\footnote{\citeproc{ref-basile2005a}{{``Sexual
   Violence in the Lives of Girls and Women,''} in \emph{Handbook of
   Women, Stress, and Trauma}, ed. Kathleen A. Kendall-Tackett (New York:
-  Brunner-Routledge, 2005), 110}.},
+  Brunner-Routledge, 2005), 110}.}
 
 \begin{quote}
 PTSD is the most common diagnosis for trauma victims and has been widely
@@ -7969,16 +7956,16 @@ As a married woman separated from her husband, Lila's fourth pregnancy
 would have a serious impact on her relationship and options moving
 forward. In many ways, it was the beginning of the end for her.
 
-For more information, see Basile\footnote{\citeproc{ref-basile2005a}{{``Sexual
-  Violence in the Lives of Girls and Women''}}.}, Elizabeth D. Heineman,
+For more information, see Basile,\footnote{\citeproc{ref-basile2005a}{{``Sexual
+  Violence in the Lives of Girls and Women''}}.} Elizabeth D. Heineman,
 ed.\footnote{\citeproc{ref-heineman2011a}{\emph{Sexual Violence in
   Conflict Zones: From the Ancient World to the Era of Human Rights}
-  (University of Pennsylvania Press, 2011)}.}, J. Robert
-Lilly\footnote{\citeproc{ref-lilly2007a}{\emph{Taken by Force: Rape and
+  (University of Pennsylvania Press, 2011)}.} J. Robert
+Lilly,\footnote{\citeproc{ref-lilly2007a}{\emph{Taken by Force: Rape and
   American GIs in Europe During World War II} (London: Palgrave
-  Macmillan, 2007)}.}, and Catherine Lutz\footnote{\citeproc{ref-lutz2001a}{\emph{Homefront:
+  Macmillan, 2007)}.} and Catherine Lutz.\footnote{\citeproc{ref-lutz2001a}{\emph{Homefront:
   A Military City and the American Twentieth Century} (Boston: Beacon
-  Press, 2001)}.}.
+  Press, 2001)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8119,13 +8106,13 @@ time for the mind to wander. I used it to think about my research, but
 Lila had much more pressing concerns: how was she going to take care of
 herself and four children under the age of six?
 
-For more information, see Leslie Everett Foster\footnote{\citeproc{ref-foster1918a}{\emph{Secrets
-  of Dry Cleaning} (York: York Blank Book Company, 1918)}.}, Carol
-Greenholt\footnote{\citeproc{ref-greenholt2023a}{\emph{Tales of a Dry
-  Cleaner} (Meadville: Christian Faith Publishing, 2023)}.}, and Walter
-Licht\footnote{\citeproc{ref-licht200a}{\emph{Getting Work:
+For more information, see Leslie Everett Foster,\footnote{\citeproc{ref-foster1918a}{\emph{Secrets
+  of Dry Cleaning} (York: York Blank Book Company, 1918)}.} Carol
+Greenholt,\footnote{\citeproc{ref-greenholt2023a}{\emph{Tales of a Dry
+  Cleaner} (Meadville: Christian Faith Publishing, 2023)}.} and Walter
+Licht.\footnote{\citeproc{ref-licht200a}{\emph{Getting Work:
   Philadelphia, 1840--1950} (Philadelphia: University of Pennsylvania
-  Press, 2000)}.}.
+  Press, 2000)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8294,12 +8281,12 @@ mother told me that she had a goiter---which indicates that she either
 went undiagnosed for a long time or was not taking her medication.
 
 For more information, see Sarah Brewer et al.\footnote{\citeproc{ref-brewer2011a}{\emph{The
-  Pregnant Body Book} (New York: DK Publishing, 2011)}.}, Robbie
-Davis-Floyd\footnote{\citeproc{ref-davis-floyd1992a}{\emph{Birth as an
+  Pregnant Body Book} (New York: DK Publishing, 2011)}.} Robbie
+Davis-Floyd,\footnote{\citeproc{ref-davis-floyd1992a}{\emph{Birth as an
   American Rite of Passage} (Berkeley: University of California Press,
-  1992)}.}, and Rickie Solinger\footnote{\citeproc{ref-solinger2000a}{\emph{Wake
+  1992)}.} and Rickie Solinger.\footnote{\citeproc{ref-solinger2000a}{\emph{Wake
   up Little Susie: Single Pregnancy and Race Before Roe v. Wade} (New
-  York: Routledge, 2000)}.}.
+  York: Routledge, 2000)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8464,18 +8451,18 @@ Way). My mother and her two younger sisters lived at the latter, which
 was smaller and not as institutional. St.~Michael's (where Myrtle Joyce
 lived) was much more cold and punishing.
 
-For more information, see Family \& Children's Center\footnote{\citeproc{ref-fcconline2024a}{{``Our
+For more information, see Family \& Children's Center,\footnote{\citeproc{ref-fcconline2024a}{{``Our
   History''} (Family \& Children's Center, 2024),
-  \url{https://www.fcconline.org/our-history/}}.}, Wendy A.
-Burns-Ardolino\footnote{\citeproc{ref-burns-ardolino2007a}{\emph{Jiggle:
-  (Re)shaping American Women} (Lanham: Lexington Books, 2007)}.},
-Cobble\footnote{\citeproc{ref-cobble1992a}{\emph{Dishing It Out}}.},
-Paul Fehribach\footnote{\citeproc{ref-fehribach2023a}{\emph{Midwestern
+  \url{https://www.fcconline.org/our-history/}}.} Wendy A.
+Burns-Ardolino,\footnote{\citeproc{ref-burns-ardolino2007a}{\emph{Jiggle:
+  (Re)shaping American Women} (Lanham: Lexington Books, 2007)}.}
+Cobble,\footnote{\citeproc{ref-cobble1992a}{\emph{Dishing It Out}}.}
+Paul Fehribach,\footnote{\citeproc{ref-fehribach2023a}{\emph{Midwestern
   Food: A Chef's Guide to the Surprising History of a Great American
   Cuisine, with More Than 100 Tasty Recipes} (University of Chicago
-  Press, 2023)}.}, and Catherine Reef\footnote{\citeproc{ref-reef2005a}{\emph{Alone
+  Press, 2023)}.} and Catherine Reef.\footnote{\citeproc{ref-reef2005a}{\emph{Alone
   in the World: Orphans and Orphanages in America} (New York: Clarion
-  Books, 2005)}.}.
+  Books, 2005)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8605,7 +8592,7 @@ touched Hazel's nose with her finger. ``And who is this little cutie?''
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio]{images/Akou24.jpeg}
+{\centering \includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={Lila with members of the Schneider family, circa 1952. Top row from the left: Helen, Minnie (Herman's aunt), Lila, Elvera (wife of Herman's brother, Raymond); Bottom row: Charlotte (wife of Herman's brother, John), Myrtle, Nora, and Grace}]{images/Akou24.jpeg}
 
 }
 
@@ -8665,12 +8652,12 @@ members, West Salem, and Camp McCoy. We've kept in touch. She confirmed
 my impression that Gladys was an outgoing and kind person and a good
 mother.
 
-For more information, see Aine Collier\footnote{\citeproc{ref-collier2010a}{\emph{The
-  Humble Little Condom: A History} (Amherst: Prometheus, 2010)}.},
-Fournier\footnote{\citeproc{ref-fournier2008a}{\emph{Fort McCoy}}.}, and
-Leslie J. Reagan\footnote{\citeproc{ref-reagan2022a}{\emph{When Abortion
-  Was a Crime: Women, Medicine, and Law in the United States,
-  1867--1973} (Berkeley: University of California Press, 2022)}.}.
+For more information, see Aine Collier,\footnote{\citeproc{ref-collier2010a}{\emph{The
+  Humble Little Condom: A History} (Amherst: Prometheus, 2010)}.}
+Fournier,\footnote{\citeproc{ref-fournier2008a}{\emph{Fort McCoy}}.} and
+Leslie J. Reagan.\footnote{\citeproc{ref-reagan2022a}{\emph{When
+  Abortion Was a Crime: Women, Medicine, and Law in the United States,
+  1867--1973} (Berkeley: University of California Press, 2022)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8782,22 +8769,22 @@ La Crosse: a college town with a large military base nearby and a large
 German-heritage population (e.g., the Schneiders). I was introduced to
 alcohol when I was still in diapers.
 
-For more information, see Olde English Crackers\footnote{\citeproc{ref-oldenglishcrackers2024a}{{``How
+For more information, see Olde English Crackers,\footnote{\citeproc{ref-oldenglishcrackers2024a}{{``How
   to Make Christmas Crackers: A DIY Guide''} (Olde English Crackers,
   2024),
-  \url{https://www.oldenglishcrackers.com/how-to-make-christmas-crackers/}}.},
-Deirdre Clemente\footnote{\citeproc{ref-clemente2014a}{\emph{Dress
+  \url{https://www.oldenglishcrackers.com/how-to-make-christmas-crackers/}}.}
+Deirdre Clemente,\footnote{\citeproc{ref-clemente2014a}{\emph{Dress
   Casual: How College Students Redefined American Style} (Chapel Hill:
-  University of North Carolina Press, 2014)}.}, Jim Draeger and Mark
-Speltz\footnote{\citeproc{ref-draeger2012a}{\emph{Bottoms up: A Toast to
-  Wisconsin's Historic Bars and Breweries} (Madison: Wisconsin
-  Historical Society Press, 2012)}.}, Gilbert Ford\footnote{\citeproc{ref-ford2016a}{\emph{The
+  University of North Carolina Press, 2014)}.} Jim Draeger and Mark
+Speltz,\footnote{\citeproc{ref-draeger2012a}{\emph{Bottoms up: A Toast
+  to Wisconsin's Historic Bars and Breweries} (Madison: Wisconsin
+  Historical Society Press, 2012)}.} Gilbert Ford,\footnote{\citeproc{ref-ford2016a}{\emph{The
   Marvelous Thing That Came from a Spring: The Accidental Invention of
   the Toy That Swept the Nation} (New York: Atheneum Books for Young
-  Readers, 2016)}.}, and Dan Shafer\footnote{\citeproc{ref-shafer2016a}{{``Most
+  Readers, 2016)}.} and Dan Shafer.\footnote{\citeproc{ref-shafer2016a}{{``Most
   of America's Drunkest Cities Are in Wisconsin,''} \emph{Milwaukee
   Magazine}, May 17, 2016,
-  \url{https://www.milwaukeemag.com/most-of-americas-drunkest-cities-are-in-wisconsin/}}.}.
+  \url{https://www.milwaukeemag.com/most-of-americas-drunkest-cities-are-in-wisconsin/}}.}
 
 \bookmarksetup{startatroot}
 
@@ -8877,13 +8864,13 @@ I don't know if Lila ever received any kind of mental health support; it
 is unlikely since the concept of ``Rape Trauma Syndrome'' was coined in
 1974 and PTSD in the 1980s.
 
-For more information, see Ed Cray\footnote{\citeproc{ref-cray1999a}{\emph{The
+For more information, see Ed Cray,\footnote{\citeproc{ref-cray1999a}{\emph{The
   Erotic Muse: American Bawdy Songs} (Champaign: University of Illinois
-  Press, 1999)}.}, Judith Lewis Herman\footnote{\citeproc{ref-herman1992a}{\emph{Trauma
+  Press, 1999)}.} Judith Lewis Herman,\footnote{\citeproc{ref-herman1992a}{\emph{Trauma
   and Recovery: The Aftermath of Violence---from Domestic Abuse to
-  Political Terror} (New York: Basic Books, 1992)}.}, and Marika
-Seigel\footnote{\citeproc{ref-seigel2013a}{\emph{Expecting: A Brief
-  History of Pregnancy Advice} (University of Chicago Press, 2013)}.}.
+  Political Terror} (New York: Basic Books, 1992)}.} and Marika
+Seigel.\footnote{\citeproc{ref-seigel2013a}{\emph{Expecting: A Brief
+  History of Pregnancy Advice} (University of Chicago Press, 2013)}.}
 
 \bookmarksetup{startatroot}
 
@@ -8992,13 +8979,13 @@ I'm not certain that Lila used speed; however, she did lose a lot of
 weight a few years before her death (from causes that are consistent
 with amphetamine abuse).
 
-For more information, see Peter Andreas\footnote{\citeproc{ref-andreas2020a}{\emph{Killers
-  High: A History of War in Six Drugs} (Oxford University Press, 2020)}.},
-Lester Grinspoon and Peter Hedblom\footnote{\citeproc{ref-grinspoon1975a}{\emph{The
+For more information, see Peter Andreas,\footnote{\citeproc{ref-andreas2020a}{\emph{Killers
+  High: A History of War in Six Drugs} (Oxford University Press, 2020)}.}
+Lester Grinspoon and Peter Hedblom,\footnote{\citeproc{ref-grinspoon1975a}{\emph{The
   Speed Culture: Amphetamine Use and Abuse in America} (Cambridge:
-  Harvard University Press, 1975)}.}, and Nicolas Rasmussen\footnote{\citeproc{ref-rasmussen2008a}{{``America's
+  Harvard University Press, 1975)}.} and Nicolas Rasmussen.\footnote{\citeproc{ref-rasmussen2008a}{{``America's
   First Amphetamine Epidemic, 1929--1971,''} \emph{American Journal of
-  Public Health} 98, no. 6 (2008): 974--85}.}.
+  Public Health} 98, no. 6 (2008): 974--85}.}
 
 \bookmarksetup{startatroot}
 
@@ -9053,7 +9040,7 @@ her thoughts, she told Myrtle that they could keep just one.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio]{images/Akou25rt.jpg}
+{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio,alt={Lila and her niece, Patty Metcalf, circa 1953}]{images/Akou25rt.jpg}
 
 }
 
@@ -9114,13 +9101,13 @@ in a bar is so filled with sexual harassment that it barely registers. I
 don't know if Lila was ever paid for sex, but it would have been easy
 for her to slip into casual prostitution.
 
-For more information, see Kylie Agllias\footnote{\citeproc{ref-agllias2016a}{\emph{Family
+For more information, see Kylie Agllias,\footnote{\citeproc{ref-agllias2016a}{\emph{Family
   Estrangement: A Matter of Perspective} (Oxford: Taylor \& Francis,
-  2016)}.}, Barry M. Dank and Roberto Refinetti, eds.\footnote{\citeproc{ref-dank2018a}{\emph{Sex
-  Work and Sex Workers} (Oxford: Taylor \& Francis, 2018)}.}, and Fern
-Schumer Chapman\footnote{\citeproc{ref-chapman2021a}{\emph{Brothers,
+  2016)}.} Barry M. Dank and Roberto Refinetti, eds.\footnote{\citeproc{ref-dank2018a}{\emph{Sex
+  Work and Sex Workers} (Oxford: Taylor \& Francis, 2018)}.} and Fern
+Schumer Chapman.\footnote{\citeproc{ref-chapman2021a}{\emph{Brothers,
   Sisters, Strangers: Sibling Estrangement and the Road to
-  Reconciliation} (New York: Penguin Publishing, 2021)}.}.
+  Reconciliation} (New York: Penguin Publishing, 2021)}.}
 
 \bookmarksetup{startatroot}
 
@@ -9277,18 +9264,18 @@ house. They were kind people, but June and her younger sister
 Bonnie---who always stayed together---did not see Lila again for two
 years.
 
-For more information, see Nancy Campbell\footnote{\citeproc{ref-campbell2000a}{\emph{Using
+For more information, see Nancy Campbell,\footnote{\citeproc{ref-campbell2000a}{\emph{Using
   Women: Gender, Drug Policy, and Social Justice} (New York: Routledge,
-  2000)}.}, John Henry Tilden\footnote{\citeproc{ref-tilden1974a}{\emph{Toxemia,
+  2000)}.} John Henry Tilden,\footnote{\citeproc{ref-tilden1974a}{\emph{Toxemia,
   the Basic Cause of Disease: An Antidote to Fear, Frenzy, and the
   Popular Mania of Chasing After so-Called Cures} (Youngstown: Natural
-  Hygiene Press, 1974)}.}, Thomas S. Weinberg, Gerhard Falk, and Ursula
-Adler Falk\footnote{\citeproc{ref-weinberg2017a}{\emph{The American Drug
-  Culture} (Thousand Oaks, California: SAGE Publications, 2017)}.}, and
-Toni Weschler\footnote{\citeproc{ref-weschler1995a}{\emph{Taking Charge
-  of Your Fertility: The Definitive Guide to Natural Birth Control,
-  Pregnancy Achievement, and Reproductive Health} (New York:
-  HarperCollins, 1995)}.}.
+  Hygiene Press, 1974)}.} Thomas S. Weinberg, Gerhard Falk, and Ursula
+Adler Falk,\footnote{\citeproc{ref-weinberg2017a}{\emph{The American
+  Drug Culture} (Thousand Oaks, California: SAGE Publications, 2017)}.}
+and Toni Weschler.\footnote{\citeproc{ref-weschler1995a}{\emph{Taking
+  Charge of Your Fertility: The Definitive Guide to Natural Birth
+  Control, Pregnancy Achievement, and Reproductive Health} (New York:
+  HarperCollins, 1995)}.}
 
 \bookmarksetup{startatroot}
 
@@ -9388,17 +9375,17 @@ values regarding birth and marriage. I respect her for taking care of
 Randy when the Slabacks were unwilling to step up; however, she probably
 put a lot of (well-meaning) pressure on Lila.
 
-For more information, see BabyCenter\footnote{\citeproc{ref-babycenter2024a}{{``Most
+For more information, see BabyCenter,\footnote{\citeproc{ref-babycenter2024a}{{``Most
   Popular Baby Names of 1954''} (BabyCenter, 2024),
-  \url{https://www.babycenter.com/baby-names/most-popular/top-baby-names-1954}}.},
-Ruth Feldstein\footnote{\citeproc{ref-feldstein2018a}{\emph{Motherhood
+  \url{https://www.babycenter.com/baby-names/most-popular/top-baby-names-1954}}.}
+Ruth Feldstein,\footnote{\citeproc{ref-feldstein2018a}{\emph{Motherhood
   in Black and White: Race and Sex in American Liberalism, 1930--1965}
-  (Ithaca: Cornell University Press, 2018)}.}, Gabrielle
-Glaser\footnote{\citeproc{ref-glaser2021a}{\emph{American Baby: A
+  (Ithaca: Cornell University Press, 2018)}.} Gabrielle
+Glaser,\footnote{\citeproc{ref-glaser2021a}{\emph{American Baby: A
   Mother, a Child, and the Secret History of Adoption} (New York:
-  Penguin Publishing, 2021)}.}, and Jessica Weiss\footnote{\citeproc{ref-weiss2000a}{\emph{To
+  Penguin Publishing, 2021)}.} and Jessica Weiss.\footnote{\citeproc{ref-weiss2000a}{\emph{To
   Have and to Hold: Marriage, the Baby Boom, and Social Change}
-  (University of Chicago Press, 2000)}.}.
+  (University of Chicago Press, 2000)}.}
 
 \bookmarksetup{startatroot}
 
@@ -9478,7 +9465,7 @@ feelings, which felt like impossible burdens.
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio]{images/Akou26rt.jpg}
+{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio,alt={Myrtle Joyce, Alice, Hazel, and Bonnie; Christmas 1956}]{images/Akou26rt.jpg}
 
 }
 
@@ -9506,13 +9493,13 @@ stamps, etc.) were changing dramatically. After subsisting for many
 years without support, I doubt Lila would have thought to ask for these
 resources on her own. June told me about the house near Copeland Park.
 
-For more information, see State Department of Public Welfare\footnote{\citeproc{ref-state1963a}{{``Social
+For more information, see State Department of Public Welfare,\footnote{\citeproc{ref-state1963a}{{``Social
   Work in Wisconsin: Helping You to Become Skilled in the Art of Helping
   Others''} (Madison, Wisconsin: State Department of Public Welfare,
-  1963)}.}, Mark R. Rank\footnote{\citeproc{ref-rank1994a}{\emph{Living
+  1963)}.} Mark R. Rank,\footnote{\citeproc{ref-rank1994a}{\emph{Living
   on the Edge: The Realities of Welfare in America} (New York: Columbia
-  University Press, 1994)}.}, and Christina G. Villegas\footnote{\citeproc{ref-villegas2022a}{\emph{Foster
-  Care in America: A Reference Handbook} (Oxford: Bloomsbury, 2022)}.}.
+  University Press, 1994)}.} and Christina G. Villegas.\footnote{\citeproc{ref-villegas2022a}{\emph{Foster
+  Care in America: A Reference Handbook} (Oxford: Bloomsbury, 2022)}.}
 
 \bookmarksetup{startatroot}
 
@@ -9566,11 +9553,11 @@ are others, but those are the photographs that I have seen. Lila was
 very bloated and sitting in a wheelchair; compared to photos in her
 twenties, she is barely recognizable.
 
-For more information, see Frank Burnet Byrom\footnote{\citeproc{ref-byrom1969a}{\emph{The
+For more information, see Frank Burnet Byrom,\footnote{\citeproc{ref-byrom1969a}{\emph{The
   Hypertensive Vascular Crisis: An Experimental Study} (New York: Grune
-  \& Stratton, 1969)}.}, Institute of Medicine\footnote{\citeproc{ref-institute2015a}{\emph{Dying
+  \& Stratton, 1969)}.} Institute of Medicine,\footnote{\citeproc{ref-institute2015a}{\emph{Dying
   in America: Improving Quality and Honoring Preferences Near the End of
-  Life} (Washington, DC: National Academies Press, 2015)}.}, and Stephen
+  Life} (Washington, DC: National Academies Press, 2015)}.} and Stephen
 K. C. Ng et al.\footnote{\citeproc{ref-ng1993a}{{``Hypertension and the
   Risk of New-Onset Unprovoked Seizures,''} \emph{Neurology} 43, no. 2
   (1993): 425}.}
@@ -9608,7 +9595,7 @@ income and no legal claims. John lived with his father and Emma until
 
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio]{images/Akou27rt.jpg}
+{\centering \includegraphics[width=0.55\linewidth,height=\textheight,keepaspectratio,alt={Herman and Emma, circa 1970}]{images/Akou27rt.jpg}
 
 }
 
@@ -9659,26 +9646,26 @@ February 2024, I have chosen not to revise the epilogue again. This
 project has taught me just how much our stories outlive us.
 
 For more information, see Magnus Chan, Jocelyn Joy Chan, and James M.
-Wright\footnote{\citeproc{ref-chan2020a}{{``Effect of Amphetamines on
+Wright,\footnote{\citeproc{ref-chan2020a}{{``Effect of Amphetamines on
   Blood Pressure,''} \emph{Cochrane Database of Systematic Reviews}, no.
-  12 (2020), \url{https://doi.org/10.1002/14651858.CD007896.pub3}}.},
-Ray J. Defalque and Amos J. Wright\footnote{\citeproc{ref-defalque2011a}{{``Methamphetamine
+  12 (2020), \url{https://doi.org/10.1002/14651858.CD007896.pub3}}.} Ray
+J. Defalque and Amos J. Wright,\footnote{\citeproc{ref-defalque2011a}{{``Methamphetamine
   for Hitler's Germany: 1937 to 1945,''} \emph{Bulletin of Anesthesia
   History} 29, no. 2 (2011): 21--32,
-  \url{https://doi.org/10.1016/S1522-8649(11)50016-2}}.}, Donald J.
-Hernandez\footnote{\citeproc{ref-hernandez1993a}{\emph{America's
+  \url{https://doi.org/10.1016/S1522-8649(11)50016-2}}.} Donald J.
+Hernandez,\footnote{\citeproc{ref-hernandez1993a}{\emph{America's
   Children: Resources from Family, Government, and the Economy} (New
-  York: Russell Sage Foundation, 1993)}.}, Vorapong Phupong and Darigar
-Darojn\footnote{\citeproc{ref-phupong2007a}{{``Amphetamine Abuse in
+  York: Russell Sage Foundation, 1993)}.} Vorapong Phupong and Darigar
+Darojn,\footnote{\citeproc{ref-phupong2007a}{{``Amphetamine Abuse in
   Pregnancy: The Impact on Obstetric Outcome,''} \emph{Archives of
   Gynecology and Obstetrics} 276 (2007): 167--70,
-  \url{https://doi.org/10.1007/s00404-007-0320-x}}.}, and Nicolas
-Rasmussen\footnote{\citeproc{ref-rasmussen2015a}{{``Amphetamine-Type
+  \url{https://doi.org/10.1007/s00404-007-0320-x}}.} and Nicolas
+Rasmussen.\footnote{\citeproc{ref-rasmussen2015a}{{``Amphetamine-Type
   Stimulants: The Early History of Their Medical and Non-Medical
   Uses,''} in \emph{The Neuropsychiatric Complications of Stimulant
   Abuse}, ed. Pille Taba, Andrew Lees, and Katrin Sikk, vol. 120,
   International Review of Neurobiology, 2015, 9--25,
-  \url{https://doi.org/10.1016/bs.irn.2015.02.001}}.}.
+  \url{https://doi.org/10.1016/bs.irn.2015.02.001}}.}
 
 \bookmarksetup{startatroot}
 
@@ -9687,7 +9674,7 @@ Rasmussen\footnote{\citeproc{ref-rasmussen2015a}{{``Amphetamine-Type
 
 \markboth{Bibliography}{Bibliography}
 
-\phantomsection\label{refs}
+\protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-adams2023a}
 Adams, Jennifer L. \emph{An Autoethnography of Letter Writing and
