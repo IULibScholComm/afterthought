@@ -187,6 +187,7 @@ format:
     include-in-header: 
       - text: <meta name="google-site-verification" content="eJHds-HZowhP4fOmzTkps1RTCDKNi3ViSQ2BSaFVA7Y" />
       - text: <link rel="canonical" href="https://iulibrariespublishing.iu.edu/afterthought/" />
+    include-after-body: _includes/accessibility-fix.html
   
   titlepage-pdf:
     coverpage: true
